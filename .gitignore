@@ -1,0 +1,9 @@
+index.html
+**/index_files
+**/index_cache/
+*.aux
+_models/*.rds
+
+
+# temporary files
+**/*.*~

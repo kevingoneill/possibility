@@ -1,0 +1,168 @@
+---
+title: Possibility in confidence<br>and cognition
+format:
+  ucl-revealjs:
+    pdf-separate-fragments: true
+    include-in-header:
+      - file: mathjax-color.html
+author: 
+  name: Kevin O'Neill
+  affiliation: 
+    name: University College London
+    department: Department of Experimental Psychology<br>Institute of Cognitive Neuroscience
+    url: https://kevingoneill.github.io
+  degrees: PhD
+  orcid: 0000-0001-7401-9802
+  url: https://www.ucl.ac.uk
+  
+bibliography: references.bib
+
+# enable tikz figures
+filters:
+  - tikz
+tikz:
+  cache: true
+  save-tex: false
+  svg-command: "pdf2svg {input} {output}" # use pdf2svg because inkscape breaks fonts
+
+execute:
+  cache: true
+
+knitr:
+  opts_chunk:
+    collapse: true
+    dev: svglite
+
+#embed-resources: true  # use this option for publication
+---
+
+:::{.content-hidden}
+% define an operator for argmax/argmin
+\DeclareMathOperator*{\argmax}{argmax}
+\DeclareMathOperator*{\argmin}{argmin}
+
+\newcommand{\logit}[1]{\textrm{logit}\left(#1\right)}
+\newcommand{\invlogit}[1]{\textrm{logit}^{-1}\left(#1\right)}
+:::
+
+```{r}
+#| label: libraries
+#| include: false
+#| cache: false
+
+library(tidyverse)
+library(brms)
+library(ggdist)
+library(tidybayes)
+library(distributional)
+library(patchwork)
+source("_assets/plotting.R")
+```
+
+## TODO
+
+* add references
+* higher-quality plots
+* driving example
+* future work
+* hmetad/measurement slides
+* thank-you slide
+
+
+# 
+
+Introductory example
+
+
+## My focus
+
+:::{.fragment .center-xy}
+```{.tikz width=800}
+%%| filename: focus_1
+\include{tikz_header.tex}
+\begin{tikzpicture}
+    \node[minimum size=3cm, circle] (reasoning) [] {reasoning};
+    \node[minimum size=3cm, circle, hidden] (metacognition) [right = 1.5cm of reasoning] {metacognition};
+    
+    \path[thick, hidden] (reasoning) edge[out=45, in=135] (metacognition);
+    \path[thick, hidden] (metacognition) edge[out=225, in=315] (reasoning);
+\end{tikzpicture}
+```
+:::
+
+:::{.fragment .center-xy}
+```{.tikz width=800}
+%%| filename: focus_2
+\include{tikz_header.tex}
+\begin{tikzpicture}
+    \node[minimum size=3cm, circle] (reasoning) [] {reasoning};
+    \node[minimum size=3cm, circle] (metacognition) [right = 1.5cm of reasoning] {metacognition};
+    
+    \path[thick, hidden] (reasoning) edge[out=45, in=135] (metacognition);
+    \path[thick, hidden] (metacognition) edge[out=225, in=315] (reasoning);
+\end{tikzpicture}
+```
+:::
+
+
+:::{.fragment .center-xy}
+```{.tikz width=800}
+%%| filename: focus_3
+\include{tikz_header.tex}
+\begin{tikzpicture}
+    \node[minimum size=3cm, circle] (reasoning) [] {reasoning};
+    \node[minimum size=3cm, circle] (metacognition) [right = 1.5cm of reasoning] {metacognition};
+    
+    \path[thick] (reasoning) edge[out=45, in=135] (metacognition);
+    \path[thick, hidden] (metacognition) edge[out=225, in=315] (reasoning);
+\end{tikzpicture}
+```
+:::
+
+:::{.fragment .center-xy}
+```{.tikz width=800}
+%%| filename: focus_4
+\include{tikz_header.tex}
+\begin{tikzpicture}
+    \node[minimum size=3cm, circle] (reasoning) [] {reasoning};
+    \node[minimum size=3cm, circle] (metacognition) [right = 1.5cm of reasoning] {metacognition};
+    
+    \path[thick] (reasoning) edge[out=45, in=135] (metacognition);
+    \path[thick] (metacognition) edge[out=225, in=315] (reasoning);
+\end{tikzpicture}
+```
+:::
+
+## add
+
+* foreshadow connections between modal & metacognition
+* describe methods & modeling frameworks
+
+
+{{< include _01_imagination.qmd >}}
+{{< include _02_metacognition_modal_cognition.qmd >}}
+{{< include _03_modal_contributions.qmd >}}
+
+# Takeaways {.dark}
+
+???
+
+
+
+# Future work
+
+
+# Teaching
+
+
+
+
+## References
+
+**NEED TO ADD**
+
+::: {#refs}
+:::
+
+
+## Back-up slides
