@@ -2,7 +2,7 @@ index.html
 **/index_files
 **/index_cache/
 *.aux
-_models/*.rds
+_slides/_models/*.rds
 _site
 
 # temporary files
