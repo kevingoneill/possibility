@@ -48,16 +48,6 @@
 <g clip-path='url(#cpMC4wMHw4NjQuMDB8MC4wMHw0MzIuMDA=)'>
 </g>
 <defs>
-  <clipPath id='cpNTMyLjU3fDg1OC41Mnw1LjQ4fDQyNi41Mg=='>
-    <rect x='532.57' y='5.48' width='325.95' height='421.04' />
-  </clipPath>
-</defs>
-<g clip-path='url(#cpNTMyLjU3fDg1OC41Mnw1LjQ4fDQyNi41Mg==)'>
-<rect x='532.57' y='5.48' width='325.95' height='421.04' style='stroke-width: 1.75; stroke: #FFFFFF; fill: #FFFFFF;' />
-</g>
-<g clip-path='url(#cpMC4wMHw4NjQuMDB8MC4wMHw0MzIuMDA=)'>
-</g>
-<defs>
   <clipPath id='cpNjguNDh8MjM2LjA3fDQyLjEyfDM3NC45OQ=='>
     <rect x='68.48' y='42.12' width='167.59' height='332.87' />
   </clipPath>
@@ -156,6 +146,24 @@
   </clipPath>
 </defs>
 <g clip-path='url(#cpNTk4LjIxfDg0OS41NXw0Mi4xMnwzNzQuOTk=)'>
+</g>
+<g clip-path='url(#cpMC4wMHw4NjQuMDB8MC4wMHw0MzIuMDA=)'>
+</g>
+<g clip-path='url(#cpNTk4LjIxfDg0OS41NXw0Mi4xMnwzNzQuOTk=)'>
+</g>
+<g clip-path='url(#cpMC4wMHw4NjQuMDB8MC4wMHw0MzIuMDA=)'>
+</g>
+<defs>
+  <clipPath id='cpNTMyLjU3fDg1OC41Mnw1LjQ4fDQyNi41Mg=='>
+    <rect x='532.57' y='5.48' width='325.95' height='421.04' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpNTMyLjU3fDg1OC41Mnw1LjQ4fDQyNi41Mg==)'>
+<rect x='532.57' y='5.48' width='325.95' height='421.04' style='stroke-width: 1.75; stroke: #FFFFFF; fill: #FFFFFF;' />
+</g>
+<g clip-path='url(#cpMC4wMHw4NjQuMDB8MC4wMHw0MzIuMDA=)'>
+</g>
+<g clip-path='url(#cpNTk4LjIxfDg0OS41NXw0Mi4xMnwzNzQuOTk=)'>
 <rect x='598.21' y='42.12' width='251.34' height='332.87' style='stroke-width: 1.75; stroke: none; fill: #FFFFFF;' />
 <polyline points='598.21,330.61 849.55,330.61 ' style='stroke-width: 0.44; stroke: #DEDEDE; stroke-linecap: butt;' />
 <polyline points='598.21,241.84 849.55,241.84 ' style='stroke-width: 0.44; stroke: #DEDEDE; stroke-linecap: butt;' />
@@ -199,6 +207,20 @@
 <text x='723.88' y='413.76' text-anchor='middle' style='font-size: 18.00px; font-family: "Arial";' textLength='12.00px' lengthAdjust='spacingAndGlyphs'>K</text>
 <text transform='translate(554.42,208.56) rotate(-90)' text-anchor='middle' style='font-size: 18.00px; font-family: "Arial";' textLength='253.84px' lengthAdjust='spacingAndGlyphs'>Average Positive Evidence Bias</text>
 <text transform='translate(573.86,208.56) rotate(-90)' text-anchor='middle' style='font-size: 18.00px; font-family: "Arial";' textLength='83.06px' lengthAdjust='spacingAndGlyphs'>(log scale)</text>
+</g>
+<g clip-path='url(#cpNTMyLjU3fDg1OC41Mnw1LjQ4fDQyNi41Mg==)'>
+<rect x='532.57' y='5.48' width='325.95' height='421.04' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+</g>
+<defs>
+  <clipPath id='cpNTM4LjA1fDg1My4wNHwxMC45Nnw0MjEuMDQ='>
+    <rect x='538.05' y='10.96' width='314.99' height='410.08' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpNTM4LjA1fDg1My4wNHwxMC45Nnw0MjEuMDQ=)'>
+</g>
+<g clip-path='url(#cpNTMyLjU3fDg1OC41Mnw1LjQ4fDQyNi41Mg==)'>
+</g>
+<g clip-path='url(#cpMC4wMHw4NjQuMDB8MC4wMHw0MzIuMDA=)'>
 </g>
 </g>
 </svg>
