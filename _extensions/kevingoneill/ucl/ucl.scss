@@ -113,7 +113,7 @@ $dark-bg-code-color: $ucl-heritage-blue;
   font-style: italic;
 }
 
-$font-family-sans-serif: UCLSans !default;
+$font-family-sans-serif: UCLSans, sans-serif, !default;
 $font-family-monospace: UCLSans, monospace;
 $presentation-font-size-root: 40px;
 $presentation-font-smaller: 0.7;
@@ -362,6 +362,16 @@ $mermaid-node-fg-color: $ucl-dark-purple;
     padding: 25px;
 }
 
+.circle {
+    background-color: $ucl-light-purple;
+    color: $ucl-dark-purple;
+    
+    border-radius: 50%;
+    padding: 25px;
+    position: relative;
+    text-align: center;
+}
+
 
 // centering classes
 .center-text {
@@ -521,3 +531,11 @@ slides section .fragment  {
 }
 */
 
+
+.reveal .slides section .fragment.highlight {
+    
+}
+
+.reveal .slides section .fragment.highlight.visible {
+    background-color: $ucl-mid-purple !important;
+}

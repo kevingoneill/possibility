@@ -1,13 +1,13 @@
 # {.dark}
 :::{style="font-size: 3em; display: inline-block; width: 15%;"}
-<h1>3</h1>
+<h1 class="ucl-light-purple">3</h1>
 :::
 :::{style="display: inline-block; width: 80%;"}
 <h2>Modal contributions to metacognition</h2>
 :::
 
 
-:::{.much-smaller style="width: 95%; line-height: 2;"}
+:::{.ucl-pale-purple .much-smaller style="width: 95%; line-height: 2;"}
 Kozyra, W., O’Neill, K., & Fleming, S. M. (2026).<br>&emsp;&emsp;Confidence is detection-like in high-dimensional spaces. *Open Mind.*
 
 O'Neill, K., & Fleming, S. M. (2026).<br>&emsp;&emsp;Quantifying metacognition with the hmetad package in R. *PsyArXiv.*
@@ -85,36 +85,21 @@ geom_circle <- function(center=c(0, 0), radius=1, n=101, ...) {
 ## setting all other X's to zero
 #######################################################################################
 c <- expand_grid(mu_target=1,
-                 x1=seq(-1.5, 3, .01),
-                 x2=seq(-1.5, 3, .01),
-                 k=c(2, 5, 10, 20)) |>
-  mutate(X=pmap(list(x1, x2, k),
-                function(x1, x2, k) c(x1, x2, rep(0, times=k-2))),
-         posterior=map2(X, mu_target, softmax),
-         a=map_dbl(posterior, ~ which.max(.[1:2])),
-         confidence=map_dbl(posterior, ~ max(.[1:2])),
-         dconf_chosen=pmap_dbl(list(X, a, mu_target),
-                               function(x,a,m) Jsoftmax(x, m)[a,a]),
-         dconf_unchosen=pmap_dbl(list(X, a, mu_target),
-                                 function(x,a,m) Jsoftmax(x, m)[a,3-a]),
-         peb=log(abs(dconf_chosen)) - log(abs(dconf_unchosen)))
-
-#######################################################################################
-## Fix X_2 = 1.5, X_{2:k} ~= 0, vary X_1
-#######################################################################################
-k <- 10
-X_other <- rnorm(k-2, mean=0, sd=.05)  ##runif(k-2, 1, 1.2)
-c2 <- expand_grid(mu_target=1,
-                  x1=seq(0, 1.5, by=.01), x2=.75, k=k) |>
-  mutate(X=map2(x1, x2, function(x1, x2) c(x1, x2, X_other)),
-         posterior=map2(X, mu_target, softmax),
-         a=map_dbl(posterior, ~ which.max(.[1:2])),
-         confidence=map_dbl(posterior, ~ max(.[1:2])))
+  x1=seq(-1.5, 3, .01),
+  x2=seq(-1.5, 3, .01),
+  k=c(2, 5, 10, 20)) |>
+  mutate(
+    X=pmap(list(x1, x2, k), function(x1, x2, k) c(x1, x2, rep(0, times=k-2))),
+    posterior=map2(X, mu_target, softmax),
+    a=map_dbl(posterior, ~ which.max(.[1:2])),
+    confidence=map_dbl(posterior, ~ max(.[1:2]))
+  ) |>
+  select(k, x1, x2, a, confidence)
 
 #######################################################################################
 ## Simulate confidence from signal detection model
 #######################################################################################
-c3 <- expand_grid(k=c(2, 5, 10, 20), stimulus=1:2, mu_target=1, N=100000) |>
+c3 <- expand_grid(k=c(2, 5, 10, 20), stimulus=1:2, mu_target=1, N=10000) |>
   group_by(mu_target, k, stimulus) |>
   mutate(mu=pmap(list(k, stimulus, mu_target),
                  function(k,s,m) if (s==1) c(m, rep(0, k-1)) else c(0, m, rep(0, k-2))),
@@ -139,7 +124,9 @@ c4 <- expand_grid(k=2:20, stimulus=1:2, mu_target=1, N=100000) |>
   group_by(k, mu_target) |>
   mutate(peb=map2(X, choice, function(x,c)
     map2_dbl(Jsoftmax(x, beta=first(mu_target)), c,
-             ~ log(abs(.x[.y,.y]))-log(abs(.x[.y,3-.y])))))
+      ~ log(abs(.x[.y,.y]))-log(abs(.x[.y,3-.y]))))) |>
+  unnest(peb) |>
+  summarize(PEB=median(peb))
 
 lms <- c3 |>
   group_by(mu_target) |>
@@ -172,20 +159,29 @@ lms <- c3 |>
   unnest(betas)
 
 
+# reduce file size
+c3 <- c3 |>
+  ungroup() |>
+  unnest(c(confidence, accuracy)) |>
+  select(k, confidence, accuracy)
+
 
 c_detection <- expand_grid(mu_target=1,
   x1=seq(-1.5, 3, .005),
   x2=seq(-1.5, 3, .005)) |>
-  mutate(X=pmap(list(x1, x2), function(x1, x2) c(x1, x2)),
-         evidence=map_dbl(X, sum),
-         posterior=map2(X, mu_target, ~ softmax(.x, .y)),
-         a=map_dbl(posterior, ~ which.max(.[1:2])),
-         confidence=map_dbl(posterior, ~ max(.[1:2])),
-         choice=map_dbl(posterior, ~ qlogis(.[[2]])),
-         detection_posterior=map(X, detection_posterior),
-         detection_a=map_dbl(detection_posterior, which.max),
-         detection_confidence=map_dbl(detection_posterior, max),
-         detection_choice=map_dbl(detection_posterior, ~ qlogis(.[2])))
+  mutate(
+    X=pmap(list(x1, x2), function(x1, x2) c(x1, x2)),
+    evidence=map_dbl(X, sum),
+    posterior=map2(X, mu_target, ~ softmax(.x, .y)),
+    a=map_dbl(posterior, ~ which.max(.[1:2])),
+    confidence=map_dbl(posterior, ~ max(.[1:2])),
+    choice=map_dbl(posterior, ~ qlogis(.[[2]])),
+    detection_posterior=map(X, detection_posterior),
+    detection_a=map_dbl(detection_posterior, which.max),
+    detection_confidence=map_dbl(detection_posterior, max),
+    detection_choice=map_dbl(detection_posterior, ~ qlogis(.[2]))
+  ) |>
+  select(x1, x2, choice, detection_choice)
 
 ## Make detection vs discrimination plot
 n.breaks <- 15
@@ -197,97 +193,15 @@ present <- 1/3
 absent <- '#b3b3b3'
 ```
 
+## A classic paradigm in psychophysics
 
-```{r}
-#| label: detection_discrimination
-#| eval: false
-#| include: false
-
-p.discrimination <- ggplot(c_detection, aes(x=x1, y=x2)) +
-  geom_raster(aes(fill=choice)) +
-  geom_hline(yintercept=0, linetype='dashed', linewidth=.25, alpha=.5) +
-  geom_vline(xintercept=0, linetype='dashed', linewidth=.25, alpha=.5) +
-  geom_circle(center=c(1, 0), color=hsv(s1, saturation, value*.95), linewidth=1) +
-  geom_circle(center=c(1, 0), color=hsv(s1, saturation, value*.95), radius=.5, linewidth=1) +
-  geom_circle(center=c(0, 1), color=hsv(s2, saturation, value*.95), linewidth=1) +
-  geom_circle(center=c(0, 1), color=hsv(s2, saturation, value*.95), radius=.5, linewidth=1) +
-  scale_fill_steps2(limits=c(-4.5, 4.5), breaks=seq(-4.5, 4.5, length.out=n.breaks),
-                    labels=c('Certain\n"S1"', rep('', (n.breaks-3)/2), 'Guess',
-                             rep('', (n.breaks-3)/2), 'Certain\n"S2"'),
-                    low=hsv(s1, saturation, value), high=hsv(s2, saturation, value)) +
-  ggtitle('Discrimination')
-p.detection <- ggplot(c_detection, aes(x=x1, y=x2)) +
-  geom_raster(aes(fill=detection_choice)) +
-  geom_hline(yintercept=0, linetype='dashed', linewidth=.25, alpha=.5) +
-  geom_vline(xintercept=0, linetype='dashed', linewidth=.25, alpha=.5) +
-  geom_circle(center=c(1, 0), color=hsv(s1, saturation, value*.95), linewidth=1) +
-  geom_circle(center=c(1, 0), color=hsv(s1, saturation, value*.95), radius=.5, linewidth=1) +
-  geom_circle(center=c(0, 1), color=hsv(s2, saturation, value*.95), linewidth=1) +
-  geom_circle(center=c(0, 1), color=hsv(s2, saturation, value*.95), radius=.5, linewidth=1) +
-  geom_circle(color=absent, linewidth=1) +
-  geom_circle(color=absent, linewidth=1, radius=.5) +
-  scale_fill_steps2(limits=c(-2.5, 2.5), breaks=seq(-2.5, 2.5, length.out=n.breaks),
-                    labels=c('Certain\n"Absent"', rep('', (n.breaks-3)/2), 'Guess',
-                             rep('', (n.breaks-3)/2), 'Certain\n"Present"'),
-                    low=absent, high=hsv(present, saturation, value)) +
-  ggtitle('Detection')
-
-p.discrimination2 <- ggplot(c_detection, aes(x=x1, y=x2)) +
-  geom_hline(yintercept=0, linetype='dashed', linewidth=.25, alpha=.5) +
-  geom_vline(xintercept=0, linetype='dashed', linewidth=.25, alpha=.5) +
-  geom_contour(aes(z=x1-x2), color='black', breaks=seq(-4.5, 4.5, length.out=n.breaks/2+1)) +
-  geom_segment(aes(x=x, y=y, xend=xend, yend=yend, color=response),
-               data=tibble(x=c(.75, .75), xend=c(-.75, 2.25),
-                           y=c(.75, .75), yend=c(2.25, -.75),
-                           response=c('s2', 's1')),
-               linewidth=3, show.legend=FALSE, arrow=arrow(type='closed')) +
-  scale_color_manual(values=c(hsv(s1, saturation, value*.95),
-                              hsv(s2, saturation, value*.95))) +
-  ggtitle('Balance of Evidence')
-p.detection2 <- ggplot(c_detection, aes(x=x1, y=x2)) +
-  geom_hline(yintercept=0, linetype='dashed', linewidth=.25, alpha=.5) +
-  geom_vline(xintercept=0, linetype='dashed', linewidth=.25, alpha=.5) +
-  geom_contour(aes(z=pmax(x1, x2)), color='black', breaks=seq(-1.5, 3, length.out=n.breaks/2)) +
-  geom_segment(aes(x=x, y=y, xend=xend, yend=yend, color=response),
-               data=tibble(x=c(0, 0), xend=c(2.75, 0),
-                           y=c(0, 0), yend=c(0, 2.75),
-                           response=c('s1', 's2')),
-               linewidth=3, arrow=arrow(type='closed'), show.legend=FALSE) +
-  scale_color_manual(values=c(hsv(s1, saturation, value*.95),
-                              hsv(s2, saturation, value*.95))) +
-  ggtitle('Response Congruent Evidence')
-
-```
-
-
-## 
-
-:::{.notes}
-* describe a task to introduce career move, possibilities & confidence
+:::{.center-horizontally .container style="background-image: url('https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41562-017-0139/MediaObjects/41562_2017_Article_BFs415620170139_Fig1_HTML.jpg'); background-size: cover; background-position: left; width: 450px; height: 450px;"}
 :::
 
 
 ## Signal discrimination
 
-:::{.center-xy .fragment .fade-in-then-out fragment-index=1}
-```{r}
-#| label: dots
-#| fig-width: 4
-#| fig-height: 4
-tibble(sim=1:100) |>
-  mutate(
-    x=runif(n()),
-    y=runif(n()),
-    color=ifelse(sim>n()*5/8, 'yellow', 'blue')
-  ) |> ggplot(aes(x=x, y=y, color=color)) +
-  geom_point(show.legend=FALSE) +
-  theme_void(paper='grey60') +
-  coord_fixed(xlim=c(-.05, 1.05), ylim=c(-.05, 1.05)) +
-  scale_color_manual(values=c(hsv(s1, saturation, value*.95), hsv(s2, saturation, value*.95)))
-```
-:::
-
-:::{.fragment .absolute top=75 left=50 fragment-index=2}
+:::{.fragment .absolute top=75 left=50 fragment-index=1}
 ```{r}
 #| label: discrimination_1
 #| fig-width: 6
@@ -295,8 +209,8 @@ tibble(sim=1:100) |>
 
 theme_sdt <- function(base_size=18, ...) {
   list(
-    xlab('Evidence for Yellow'),
-    ylab('Evidence for Blue'),
+    xlab('Evidence for Face'),
+    ylab('Evidence for House'),
     coord_fixed(xlim=c(-1.5, 3), ylim=c(-1.5, 3), expand=FALSE),
     theme_classic(base_size=base_size, ...),
     theme(
@@ -311,8 +225,8 @@ p.discrimination <- ggplot(c_detection, aes(x=x1, y=x2)) +
   geom_hline(yintercept=0, linetype='dashed', linewidth=.25, alpha=.5) +
   geom_vline(xintercept=0, linetype='dashed', linewidth=.25, alpha=.5) +
   scale_fill_steps2(limits=c(-4.5, 4.5), breaks=seq(-4.5, 4.5, length.out=n.breaks),
-    labels=c('Certain\n"Yellow"', rep('', (n.breaks-3)/2), 'Guess',
-      rep('', (n.breaks-3)/2), 'Certain\n"Blue"'),
+    labels=c('Certain\n"Face"', rep('', (n.breaks-3)/2), 'Guess',
+      rep('', (n.breaks-3)/2), 'Certain\n"House"'),
     low=hsv(s1, saturation, value), high=hsv(s2, saturation, value)) +
   theme_sdt()
 
@@ -321,7 +235,7 @@ p.discrimination <- ggplot(c_detection, aes(x=x1, y=x2)) +
 ```
 :::
 
-:::{.fragment .absolute top=75 left=50 fragment-index=3}
+:::{.fragment .absolute top=75 left=50 fragment-index=2}
 ```{r}
 #| label: discrimination_2
 #| fig-width: 6
@@ -335,7 +249,7 @@ p.discrimination <- p.discrimination +
 ```
 :::
 
-:::{.fragment .absolute top=75 left=50 fragment-index=4}
+:::{.fragment .absolute top=75 left=50 fragment-index=3}
 ```{r}
 #| label: discrimination_3
 #| fig-width: 6
@@ -350,7 +264,7 @@ p.discrimination <- p.discrimination +
 :::
 
 
-:::{.fragment .absolute top=75 left=50 fragment-index=7}
+:::{.fragment .absolute top=75 left=50 fragment-index=6}
 ```{r}
 #| label: discrimination_4
 #| fig-width: 6
@@ -365,8 +279,8 @@ p.discrimination <- ggplot(c_detection, aes(x=x1, y=x2)) +
   geom_circle(center=c(0, 1), color=hsv(s2, saturation, value*.95), linewidth=1) +
   geom_circle(center=c(0, 1), color=hsv(s2, saturation, value*.95), radius=.5, linewidth=1) +
   scale_fill_steps2(limits=c(-4.5, 4.5), breaks=seq(-4.5, 4.5, length.out=n.breaks),
-    labels=c('Certain\n"Yellow"', rep('', (n.breaks-3)/2), 'Guess',
-      rep('', (n.breaks-3)/2), 'Certain\n"Blue"'),
+    labels=c('Certain\n"Face"', rep('', (n.breaks-3)/2), 'Guess',
+      rep('', (n.breaks-3)/2), 'Certain\n"House"'),
     low=hsv(s1, saturation, value), high=hsv(s2, saturation, value)) +
   theme_sdt()
 
@@ -375,18 +289,19 @@ p.discrimination <- ggplot(c_detection, aes(x=x1, y=x2)) +
 ```
 :::
 
-:::{.absolute right=0 top=150 .fragment .fade-out fragment-index=7}
-[$$ s \in [{\color{s1} s_1}, {\color{s2} s_2}] $$]{.fragment fragment-index=5}
-[$$ x \sim \mathcal{N}(\mu_s, I_2) $$]{.fragment fragment-index=5}
-[$$ a = \argmax_{i \in \{ 1,2\}} P(s_i \;\vert\; x) $$]{.fragment fragment-index=6}
-[$$ c = P(s_a \;\vert\; x) $$]{.fragment fragment-index=6}
+:::{.absolute right=0 top=150 .fragment .fade-out fragment-index=6}
+[$$ s \in [{\color{s1} s_1}, {\color{s2} s_2}] $$]{.fragment fragment-index=4}
+[$$ x \sim \mathcal{N}(\mu_s, I_2) $$]{.fragment fragment-index=4}
+[$$ a = \argmax_{i \in \{ 1,2\}} P(s_i \;\vert\; x) $$]{.fragment fragment-index=5}
+[$$ c = P(s_a \;\vert\; x) $$]{.fragment fragment-index=5}
 :::
 
-:::{.absolute right=0 top=150 .fragment fragment-index=7}
+:::{.absolute right=0 top=150 .fragment fragment-index=6}
 $$ s \in [{\color{s1} s_1}, {\color{s2} s_2}] $$
 $$ x \sim \mathcal{N}(\mu_s, I_2) $$
 $$ a = \argmax_{i \in \{ 1,2\}} P(s_i \;\vert\; x) $$
-$$ c = \invlogit{{\color{s1} x_1} - {\color{s2} x_2}} $$
+$$ c = \invlogit{\lvert {\color{s1} x_1} - {\color{s2}
+x_2} \rvert} $$
 :::
 
 
@@ -400,11 +315,11 @@ $$ c = \invlogit{{\color{s1} x_1} - {\color{s2} x_2}} $$
 p.detection <- ggplot(c_detection, aes(x=x1, y=x2)) +
   geom_hline(yintercept=0, linetype='dashed', linewidth=.25, alpha=.5) +
   geom_vline(xintercept=0, linetype='dashed', linewidth=.25, alpha=.5) +
-  scale_fill_steps2(limits=c(-4.5, 4.5), breaks=seq(-4.5, 4.5, length.out=n.breaks),
-    labels=c('Certain\n"Yellow"', rep('', (n.breaks-3)/2), 'Guess',
-      rep('', (n.breaks-3)/2), 'Certain\n"Blue"'),
-    low=hsv(s1, saturation, value), high=hsv(s2, saturation, value)) +
   theme_sdt() +
+  scale_fill_steps2(limits=c(-2.5, 2.5), breaks=seq(-2.5, 2.5, length.out=n.breaks),
+    labels=c('Certain\n"Absent"', rep('', (n.breaks-3)/2), 'Guess',
+      rep('', (n.breaks-3)/2), 'Certain\n"Present"'),
+    low=absent, high=hsv(present, saturation, value)) +
   geom_circle(center=c(1, 0), color=hsv(s1, saturation, value*.95), linewidth=1) +
   geom_circle(center=c(1, 0), color=hsv(s1, saturation, value*.95), radius=.5, linewidth=1) +
   geom_circle(center=c(0, 1), color=hsv(s2, saturation, value*.95), linewidth=1) +
@@ -475,15 +390,11 @@ p.detection <- ggplot(c_detection, aes(x=x1, y=x2)) +
 
 ## A problem
 
-:::{.fragment .container style="background-image: url('https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41562-017-0139/MediaObjects/41562_2017_Article_BFs415620170139_Fig1_HTML.jpg'); background-size: cover; background-position: left; width: 400px; height: 400px;"}
-:::
 
-:::{.fragment .container style="background-image: url('https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41562-017-0139/MediaObjects/41562_2017_Article_BFs415620170139_Fig3_HTML.jpg'); background-size: cover; background-position: right; width: 400px; height: 400px;"}
-:::
+![](https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41562-017-0139/MediaObjects/41562_2017_Article_BFs415620170139_Fig3_HTML.jpg?as=webp){.center-horizontally .fragment width=800}
 
 
-
-[*Why does **discrimination** confidence resemble optimal **detection** confidence?*]{.center-text .absolute .center-horizontally bottom=0 width=800 .fragment}
+[*Why does **discrimination** confidence resemble optimal **detection** confidence?*]{.center-text .absolute .center-horizontally bottom=50 width=800 .fragment}
 
 
 ## An idea
@@ -537,11 +448,10 @@ p.detection <- ggplot(c_detection, aes(x=x1, y=x2)) +
 :::
 
 
-## High-dimensional signal detection
+## High-dimensional<br>signal detection theory
 
 :::{.r-stack}
-
-::::{.fragment}
+::::{}
 ```{r}
 #| label: sdt_k_1
 #| fig-width: 12
@@ -559,16 +469,16 @@ conf_plot <- function(c, K=1, base_size=18, ...) {
     xlab('Evidence for Face') +
     ylab('Evidence for House') +
     coord_fixed(xlim=c(-1.5, 3), ylim=c(-1.5, 3), expand=FALSE) +
-    theme_classic(base_size=base_size, ...)    
+    theme_classic(base_size=base_size, ...)
 }
 
 p.k.2 <- conf_plot(c, K=2)
-p.k.5 <- conf_plot(c, K=5)
-p.k.10 <- conf_plot(c, K=10)
-p.k.20 <- conf_plot(c, K=20)
+p.k.5 <- conf_plot(c, K=5) + theme(axis.title.y=element_blank())
+p.k.10 <- conf_plot(c, K=10) + theme(axis.title.y=element_blank())
+p.k.20 <- conf_plot(c, K=20) + theme(axis.title.y=element_blank())
 
-(p.k.2 | hide_plot(p.k.5) | hide_plot(p.k.10) | hide_plot(p.k.20)) +
-  plot_layout(axes='collect')
+(p.k.2 + hide_plot(p.k.5) + hide_plot(p.k.10) + hide_plot(p.k.20)) +
+  plot_layout(nrow=1, axes='collect')
 ```
 ::::
 
@@ -577,8 +487,8 @@ p.k.20 <- conf_plot(c, K=20)
 #| label: sdt_k_2
 #| fig-width: 12
 #| fig-height: 4
-(p.k.2 | p.k.5 | hide_plot(p.k.10) | hide_plot(p.k.20)) +
-  plot_layout(axes='collect')
+(p.k.2 + p.k.5 + hide_plot(p.k.10) + hide_plot(p.k.20)) +
+  plot_layout(nrow=1, axes='collect')
 ```
 ::::
 
@@ -587,8 +497,8 @@ p.k.20 <- conf_plot(c, K=20)
 #| label: sdt_k_3
 #| fig-width: 12
 #| fig-height: 4
-(p.k.2 | p.k.5 | p.k.10 | hide_plot(p.k.20)) +
-  plot_layout(axes='collect')
+(p.k.2 + p.k.5 + p.k.10 + hide_plot(p.k.20)) +
+  plot_layout(nrow=1, axes='collect')
 ```
 ::::
 
@@ -597,19 +507,18 @@ p.k.20 <- conf_plot(c, K=20)
 #| label: sdt_k_4
 #| fig-width: 12
 #| fig-height: 4
-(p.k.2 | p.k.5 | p.k.10 | p.k.20) +
-  plot_layout(axes='collect')
+(p.k.2 + p.k.5 + p.k.10 + p.k.20) +
+  plot_layout(nrow=1, axes='collect_x')
 ```
 ::::
 :::
 
 
 
-## Verification using simulation
+## Diminishing effect of unchosen evidence on confidence
 
 
 :::{.r-stack}
-
 ::::{.fragment}
 ```{r}
 #| label: peb_1
@@ -625,23 +534,22 @@ peb_plot <- function(K=2) {
     geom_col(position=position_dodge(1)) +
     scale_fill_brewer('K', palette='Oranges', breaks=c('2', '5', '10', '20'), drop=FALSE) +
     ylab('Beta coefficients') +
+    scale_x_discrete('Evidence', labels=c('Chosen', 'Unchosen')) +
     facet_wrap(~ dv, scales='free') +
-    theme_classic(18) +
-    theme(axis.title.x=element_blank())
+    theme_classic(18)
   
   ## plot average PEB for simulated choices
   p.peb <- c4 |>
     filter(k <= K) |>
-    unnest(peb) |>
-    summarize(PEB=median(peb)) |>
     ggplot(aes(x=k, y=PEB)) +
     geom_line() +
-    scale_x_continuous('k', limits=c(0, 20), expand=expansion()) +
+    geom_point(data=~ filter(., k %in% c(2, 5, 10, 20))) +
+    scale_x_continuous('K', limits=c(0, 20), expand=expansion()) +
     scale_y_continuous('Average Positive Evidence Bias\n(log scale)',
       limits=c(0, 3.75), expand=expansion()) +
     theme_light(18)
   
-  p.beta + p.peb + plot_layout(widths=c(2, 1))
+  p.beta + p.peb + plot_layout(widths=c(3, 2))
 }
 
 peb_plot(K=2)
@@ -680,15 +588,163 @@ peb_plot(K=20)
 :::
 
 
-## Effect on metacognitive efficiency
+## Metacognitive inefficiency
+
+<br><br>
+
+:::{.r-stack}
+::::{.fragment}
+```{r}
+#| label: k_metad_1
+#| fig-width: 12
+#| fig-height: 5
+k_metad_plot <- function(K=2, base_size=18, ...) {
+  c3 |>
+    filter(k==K) |>
+    unnest(c(confidence, accuracy)) |>
+    mutate(accuracy=ifelse(accuracy, 'Correct', 'Incorrect')) |>
+    ggplot(aes(x=confidence, fill=accuracy)) +
+    stat_slab(
+      scale=.75, alpha=.6, color=NA,
+      density=density_bounded(bounds=c(0, 1), bandwidth=.025)
+    ) +
+    scale_x_continuous('Confidence', limits=c(0, 1), breaks=c(0, .5, 1),
+      labels=c('0', '.5',  '1'), expand=expansion()) +
+    scale_y_continuous(expand=expansion()) +
+    ggtitle(paste0('K = ', K)) +
+    scale_fill_manual(
+      'Accuracy', values=c('darkgoldenrod3', 'grey70')
+    ) +
+    theme_classic(base_size=base_size, ...) +
+    theme(
+      axis.title.y=element_blank(),
+      axis.text.y=element_blank(),
+      axis.ticks.y=element_blank(),
+      axis.line.y=element_blank(),
+      legend.position='bottom'
+    )
+}
+
+p.metad.2 <- k_metad_plot(K=2)
+p.metad.5 <- k_metad_plot(K=5)
+p.metad.10 <- k_metad_plot(K=10)
+p.metad.20 <- k_metad_plot(K=20)
+
+((p.metad.2 | hide_plot(p.metad.5) | hide_plot(p.metad.10) | hide_plot(p.metad.20)) /
+  guide_area()) +
+  plot_layout(guides='collect')
+```
+::::
+
+::::{.fragment}
+```{r}
+#| label: k_metad_2
+#| fig-width: 12
+#| fig-height: 5
+((p.metad.2 | p.metad.5 | hide_plot(p.metad.10) | hide_plot(p.metad.20)) /
+  guide_area()) +
+  plot_layout(guides='collect')
+```
+::::
+
+::::{.fragment}
+```{r}
+#| label: k_metad_3
+#| fig-width: 12
+#| fig-height: 5
+((p.metad.2 | p.metad.5 | p.metad.10 | hide_plot(p.metad.20)) /
+  guide_area()) +
+  plot_layout(guides='collect')
+```
+::::
+
+::::{.fragment}
+```{r}
+#| label: k_metad_4
+#| fig-width: 12
+#| fig-height: 5
+((p.metad.2 | p.metad.5 | p.metad.10 | p.metad.20) /
+  guide_area()) +
+  plot_layout(guides='collect')
+```
+::::
+:::
 
 
 
 ## Developing new measures of metacognition
 
+:::{.r-stack}
+::::{.ucl-white-bg}
+![](_images/_confidence/fig_specificity_3-1.svg){width="100%" .fragment}
+::::
+
+::::{.ucl-white-bg}
+![](_images/_confidence/fig_specificity_4-1.svg){width="100%" .fragment}
+::::
+:::
+
+## Developing new measures of metacognition
+
+:::{.r-stack}
+::::{.ucl-white-bg}
+![](_images/_confidence/fig_reliability_1-1.svg){width="100%" .fragment}
+::::
+
+::::{.ucl-white-bg}
+![](_images/_confidence/fig_reliability_2-1.svg){width="100%" .fragment}
+::::
+::::{.ucl-white-bg}
+![](_images/_confidence/fig_reliability_3-1.svg){width="100%" .fragment}
+::::
+:::
+
+## Developing new measures of metacognition
+
+![](https://metacoglab.github.io/hmetad_tutorial/index_files/figure-html/fig-bias-mh-1.svg){width=600 .center-horizontally}
+
+## `hmetad`: an `R` package for hierarchical Bayesian modeling of confidence ratings {.dark}
+
+:::{.columns}
+
+::::{.column .center-text }
+
+:::::{.tiny}
+<br>
+:::::
+
+![](_images/_confidence/hmetad_qr.svg){width="50%"}
+::::
 
 
+::::{.column width="35%" .much-smaller}
+:::::{style="font-size: 0.15em"}
+<br>
+:::::
 
+``` r
+## fit a multilevel meta-d' model
+m <- fit_metad(
+  bf(
+    N ~ 1 + (1 | participant),
+    dprime ~ 1 + (1 | participant),
+    c ~ 1 + (1 | participant),
+    metac2zero1diff ~ 1 + (1 | participant),
+    metac2one1diff ~ 1 + (1 | participant)
+  ), data=d, ...
+)
+
+## compute meta-delta by participant
+d |>
+  distinct(participant) |>
+  add_metacognitive_bias_draws(m) |>
+  median_qi()
+```
+::::
+
+::::{.column width="5%" .much-smaller}
+::::
+:::
 
 
 
@@ -700,13 +756,13 @@ peb_plot(K=20)
 
 <br>
 
-[This explains:]{.fragment fragment-index=1}
+[This:]{.fragment fragment-index=1}
 
 :::{.much-smaller}
 <ul>
-    <li class="fragment" data-fragment-index=1>how confidence is affected by evidence</li>
-    <li class="fragment" data-fragment-index=2>???</li>
-    <li class="fragment" data-fragment-index=3>???</li>
+    <li class="fragment" data-fragment-index=1>explains how confidence is affected by evidence</li>
+    <li class="fragment" data-fragment-index=2>motivates the development of new statistical tools</li>
+    <li class="fragment" data-fragment-index=3>creates opportunities for other kinds of metacognition</li>
 </ul>
 :::
 

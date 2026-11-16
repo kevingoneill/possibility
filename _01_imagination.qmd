@@ -1,12 +1,12 @@
 # {.dark}
 :::{style="font-size: 3em; display: inline-block; width: 15%;"}
-<h1>1</h1>
+<h1 class="ucl-light-purple">1</h1>
 :::
 :::{style="display: inline-block; width: 80%;"}
 <h2>Imagination<br>and causal judgment</h2>
 :::
 
-:::{.tiny}
+:::{.ucl-pale-purple .tiny}
 Krasich, K., O’Neill, K., & De Brigard, F. (2024).<br>&emsp;&emsp;Looking at mental images: Eye‐tracking mental simulation during retrospective causal judgment.<br>&emsp;&emsp;*Cognitive Science.*
 
 Henne, P., & O'Neill, K. (2022).<br>&emsp;&emsp;Double prevention, causal judgments, and counterfactuals. *Cognitive science.*
@@ -511,24 +511,20 @@ Modal concept
 
 ::::{.column width="40%"}
 :::::{.r-stack}
-::::::{.much-smaller .fragment .fade-in-then-out fragment-index=7}
-[Control]{.larger}
+::::::{.center-vertically .much-smaller .fragment .fade-in-then-out fragment-index=7}
+[**Control**]{.larger .ucl-mid-purple}
 
 Before you answer the questions below, we would like you to consider what happened in the video you just watched.
 
 Please describe what actually happened<br>in the video.
-
-(Please write at least<br>two or three sentences.)
 ::::::
 
-::::::{.much-smaller .fragment fragment-index=8}
-[Manipulation]{.larger}
+::::::{.center-vertically .much-smaller .fragment fragment-index=8}
+[**Manipulation**]{.larger .ucl-mid-purple}
 
 Before you answer the questions below, we would like you to imagine that<br>ball B did not hit ball A at all so that ball A hit ball E.
 
 Please describe what<br>you imagine.
-
-(Please write at least<br>two or three sentences.)
 ::::::
 :::::
 ::::

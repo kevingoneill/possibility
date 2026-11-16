@@ -1,12 +1,12 @@
 # {.dark}
 :::{style="font-size: 3em; display: inline-block; width: 15%;"}
-<h1>2</h1>
+<h1 class="ucl-light-purple">2</h1>
 :::
 :::{style="display: inline-block; width: 80%;"}
 <h2>Metacognition<br>about modal cognition</h2>
 :::
 
-:::{.much-smaller}
+:::{.ucl-pale-purple .much-smaller}
 O'Neill, K., Henne, P., Bello, P., Pearson, J., & De Brigard, F. (2022).<br>&emsp;&emsp;Confidence and gradation in causal judgment. *Cognition.*
 
 O'Neill, K., Henne, P., Pearson, J., & De Brigard, F. (2024).<br>&emsp;&emsp;Modeling confidence in causal judgments.<br>&emsp;&emsp;*Journal of experimental psychology: general.*
@@ -203,6 +203,7 @@ predictions_gradation <- data_gradation |>
 ::::{.fragment fragment-index=1}
 ```{.tikz width=700}
 %%| filename: gradation_2
+%%| additionalPackages: \usepackage{cmbright}
 \include{tikz_header2.tex}
 \begin{tikzpicture}
     \node[hidden] (concepts) [] {imagined\\possibilities};
@@ -219,6 +220,7 @@ predictions_gradation <- data_gradation |>
 ::::{.fragment fragment-index=2}
 ```{.tikz width=700}
 %%| filename: gradation_3
+%%| additionalPackages: \usepackage{cmbright}
 \include{tikz_header2.tex}
 \begin{tikzpicture}
     \node[] (concepts) [] {imagined\\possibilities};
@@ -235,6 +237,7 @@ predictions_gradation <- data_gradation |>
 ::::{.fragment fragment-index=3}
 ```{.tikz width=700}
 %%| filename: gradation_4
+%%| additionalPackages: \usepackage{cmbright}
 \include{tikz_header2.tex}
 \begin{tikzpicture}
     \node[] (concepts) [] {imagined\\possibilities};
@@ -259,7 +262,7 @@ predictions_gradation <- data_gradation |>
 ::::{}
 ```{.tikz width=800}
 %%| filename: gradation_design_1
-%%| additionalPackages: \usepackage{soul}
+%%| additionalPackages: \usepackage{soul, cmbright}
 \include{tikz_header2.tex}
 \begin{tikzpicture}[every node/.style={minimum size=4cm, text width=4cm, align=center, draw=black, fill=UCL_paper_white, text=black, line width=1pt}, scale=0.5, node distance=1.5cm and 1.5cm]
     \node[] (vignette) [] {Vignette};
@@ -278,7 +281,7 @@ predictions_gradation <- data_gradation |>
 ::::{.fragment}
 ```{.tikz width=800}
 %%| filename: gradation_design_2
-%%| additionalPackages: \usepackage{soul}
+%%| additionalPackages: \usepackage{soul, cmbright}
 \include{tikz_header2.tex}
 \begin{tikzpicture}[every node/.style={minimum size=4cm, text width=4cm, align=center, draw=black, fill=UCL_paper_white, text=black, line width=1pt}, scale=0.5, node distance=1.5cm and 1.5cm]
     \node[] (vignette) [] {Vignette};
@@ -297,7 +300,7 @@ predictions_gradation <- data_gradation |>
 ::::{.fragment}
 ```{.tikz width=800}
 %%| filename: gradation_design_3
-%%| additionalPackages: \usepackage{soul}
+%%| additionalPackages: \usepackage{soul, cmbright}
 \include{tikz_header2.tex}
 \begin{tikzpicture}[every node/.style={minimum size=4cm, text width=4cm, align=center, draw=black, fill=UCL_paper_white, text=black, line width=1pt}, scale=0.5, node distance=1.5cm and 1.5cm]
     \node[] (vignette) [] {Vignette};
@@ -316,7 +319,7 @@ predictions_gradation <- data_gradation |>
 ::::{.fragment}
 ```{.tikz width=800}
 %%| filename: gradation_design_4
-%%| additionalPackages: \usepackage{soul}
+%%| additionalPackages: \usepackage{soul, cmbright}
 \include{tikz_header2.tex}
 \begin{tikzpicture}[every node/.style={minimum size=4cm, text width=4cm, align=center, draw=black, fill=UCL_paper_white, text=black, line width=1pt}, scale=0.5, node distance=1.5cm and 1.5cm]
     \node[] (vignette) [] {Vignette};
@@ -335,7 +338,7 @@ predictions_gradation <- data_gradation |>
 ::::{.fragment .ucl-white-bg}
 ```{.tikz width=800}
 %%| filename: gradation_design_5
-%%| additionalPackages: \usepackage{soul}
+%%| additionalPackages: \usepackage{soul, cmbright}
 \include{tikz_header2.tex}
 \begin{tikzpicture}[every node/.style={minimum size=4cm, text width=4cm, align=center, draw=black, fill=UCL_paper_white, text=black, line width=1pt}, scale=0.5, node distance=1.5cm and 1.5cm]
     \node[] (vignette) [] {Vignette};

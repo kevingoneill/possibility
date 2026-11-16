@@ -2,6 +2,7 @@
 title: Possibility in confidence<br>and cognition
 format:
   ucl-revealjs:
+    code-line-numbers: false
     pdf-separate-fragments: true
     include-in-header:
       - file: mathjax-color.html
@@ -59,101 +60,207 @@ library(patchwork)
 source("_assets/plotting.R")
 ```
 
-## TODO
+## {.dark}
 
-* add references
-* higher-quality plots
-* driving example
-* future work
-* hmetad/measurement slides
-* thank-you slide
+:::{style="font-size: 3em"}
+::::{.circle .ucl-light-purple-bg .absolute width=150 height=150 top=100 left=200 .fragment fragment-index=3}
+<i class="fa-solid fa-plane"></i>
+::::
 
+::::{.fragment .fade-out fragment-index=5}
+:::::{.circle .ucl-light-purple-bg .absolute width=150 height=150 top=100 left=-10 .fragment fragment-index=2}
+<i class="fa-solid fa-car-side"></i>
+:::::
 
-# 
+:::::{.circle .ucl-light-purple-bg .absolute width=150 height=150 top=100 left=410 .fragment fragment-index=4}
+<i class="fa-solid fa-train-subway"></i>
+:::::
+::::
 
-Introductory example
+::::{.fragment fragment-index=6}
+:::::{.circle .ucl-light-purple-bg .absolute width=150 height=150 bottom=100 left=200 .fragment .custom .highlight fragment-index=8}
+<i class="fa-solid fa-ban"></i>
+:::::
+::::
 
+::::{.absolute .center-horizontally top=200 style="rotate: 20deg;" .fragment fragment-index=5}
+<i class="fa-solid fa-arrow-right-long"></i>
+::::
 
-## My focus
+::::{.absolute .center-horizontally bottom=200 style="rotate: -20deg;" .fragment fragment-index=6}
+<i class="fa-solid fa-arrow-right-long"></i>
+::::
 
-:::{.fragment .center-xy}
+::::{.circle .ucl-light-purple-bg .absolute width=150 height=150 right=200 .center-vertically .fragment fragment-index=1}
+<i class="fa-solid fa-music"></i>
+::::
+:::
+
+:::{.much-smaller .ucl-mid-purple .center-text .absolute right=150 top=150 width=300 .fragment fragment-index=7}
+*What caused you to miss the concert?*
+:::
+
+## My focus {.dark}
+
+:::{.columns}
+::::{.column width="75%"}
+::::{.r-stack}
+:::::{.fragment}
 ```{.tikz width=800}
 %%| filename: focus_1
-\include{tikz_header.tex}
+%%| additionalPackages: \usepackage{cmbright}
+\include{tikz_header_dark.tex}
 \begin{tikzpicture}
-    \node[minimum size=3cm, circle] (reasoning) [] {reasoning};
-    \node[minimum size=3cm, circle, hidden] (metacognition) [right = 1.5cm of reasoning] {metacognition};
+    \node[minimum size=3cm, circle] (modal) [] {modal\\cognition};
+    \node[minimum size=3cm, circle, hidden] (metacognition) [right = 1.5cm of modal] {metacognition};
     
-    \path[thick, hidden] (reasoning) edge[out=45, in=135] (metacognition);
-    \path[thick, hidden] (metacognition) edge[out=225, in=315] (reasoning);
+    \path[thick, hidden] (modal) to[out=45, in=135] node[unboxed, above]{contributes to} (metacognition);
+    \path[thick, hidden] (metacognition) to[out=225, in=315] node[unboxed, below]{about} (modal);
 \end{tikzpicture}
 ```
-:::
+:::::
 
-:::{.fragment .center-xy}
+:::::{.fragment}
 ```{.tikz width=800}
 %%| filename: focus_2
-\include{tikz_header.tex}
+%%| additionalPackages: \usepackage{cmbright}
+\include{tikz_header_dark.tex}
 \begin{tikzpicture}
-    \node[minimum size=3cm, circle] (reasoning) [] {reasoning};
-    \node[minimum size=3cm, circle] (metacognition) [right = 1.5cm of reasoning] {metacognition};
+    \node[minimum size=3cm, circle] (modal) [] {modal\\cognition};
+    \node[minimum size=3cm, circle] (metacognition) [right = 1.5cm of modal] {metacognition};
     
-    \path[thick, hidden] (reasoning) edge[out=45, in=135] (metacognition);
-    \path[thick, hidden] (metacognition) edge[out=225, in=315] (reasoning);
+    \path[thick, hidden] (modal) to[out=45, in=135] node[unboxed, above]{contributes to} (metacognition);
+    \path[thick, hidden] (metacognition) to[out=225, in=315] node[unboxed, below]{about} (modal);
 \end{tikzpicture}
 ```
-:::
+:::::
 
-
-:::{.fragment .center-xy}
+:::::{.fragment}
 ```{.tikz width=800}
 %%| filename: focus_3
-\include{tikz_header.tex}
+%%| additionalPackages: \usepackage{cmbright}
+\include{tikz_header_dark.tex}
 \begin{tikzpicture}
-    \node[minimum size=3cm, circle] (reasoning) [] {reasoning};
-    \node[minimum size=3cm, circle] (metacognition) [right = 1.5cm of reasoning] {metacognition};
+    \node[minimum size=3cm, circle] (modal) [] {modal\\cognition};
+    \node[minimum size=3cm, circle] (metacognition) [right = 1.5cm of modal] {metacognition};
     
-    \path[thick] (reasoning) edge[out=45, in=135] (metacognition);
-    \path[thick, hidden] (metacognition) edge[out=225, in=315] (reasoning);
+    \path[thick, hidden] (modal) to[out=45, in=135]  node[unboxed, above]{contributes to} (metacognition);
+    \path[thick] (metacognition) to[out=225, in=315] node[unboxed, below]{about} (modal);
 \end{tikzpicture}
 ```
-:::
+:::::
 
-:::{.fragment .center-xy}
+:::::{.fragment}
 ```{.tikz width=800}
 %%| filename: focus_4
-\include{tikz_header.tex}
+%%| additionalPackages: \usepackage{cmbright}
+\include{tikz_header_dark.tex}
 \begin{tikzpicture}
-    \node[minimum size=3cm, circle] (reasoning) [] {reasoning};
-    \node[minimum size=3cm, circle] (metacognition) [right = 1.5cm of reasoning] {metacognition};
+    \node[minimum size=3cm, circle] (modal) [] {modal\\cognition};
+    \node[minimum size=3cm, circle] (metacognition) [right = 1.5cm of modal] {metacognition};
     
-    \path[thick] (reasoning) edge[out=45, in=135] (metacognition);
-    \path[thick] (metacognition) edge[out=225, in=315] (reasoning);
+    \path[thick] (modal) to[out=45, in=135] node[unboxed, above]{contributes to} (metacognition);
+    \path[thick] (metacognition) to[out=225, in=315] node[unboxed, below]{about} (modal);
 \end{tikzpicture}
 ```
+:::::
+::::
+::::
+
+::::{.column width="25%" .much-smaller}
+:::::{.center-vertically .incremental}
+* behavior
+* computational models
+* Bayesian statistics
+:::::
+::::
 :::
 
-## add
 
-* foreshadow connections between modal & metacognition
-* describe methods & modeling frameworks
+# {.dark}
+
+:::{.much-smaller}
+::::{.fragment}
+:::::{style="font-size: 3em; display: inline-block; width: 15%; text-align: right;"}
+<h1 class="ucl-light-purple">1</h1>
+:::::
+:::::{style="display: inline-block; width: 5%;"}
+:::::
+:::::{style="display: inline-block; width: 75%;"}
+<h2>Imagination<br>and causal judgment</h2>
+:::::
+::::
+
+::::{.fragment}
+:::::{style="font-size: 3em; display: inline-block; width: 15%; text-align: right;"}
+<h1 class="ucl-light-purple">2</h1>
+:::::
+:::::{style="display: inline-block; width: 5%;"}
+:::::
+:::::{style="display: inline-block; width: 75%;"}
+<h2>Metacognition<br>about modal cognition</h2>
+:::::
+::::
+
+::::{.fragment}
+:::::{style="font-size: 3em; display: inline-block; width: 15%; text-align: right;"}
+<h1 class="ucl-light-purple">3</h1>
+:::::
+:::::{style="display: inline-block; width: 5%;"}
+:::::
+:::::{style="display: inline-block; width: 75%;"}
+<h2>Modal contributions<br>to metacognition</h2>
+:::::
+::::
+:::
+
 
 
 {{< include _01_imagination.qmd >}}
 {{< include _02_metacognition_modal_cognition.qmd >}}
 {{< include _03_modal_contributions.qmd >}}
 
-# Takeaways {.dark}
+# {.dark}
 
-???
+:::{.much-smaller}
+::::{style="font-size: 3em; display: inline-block; width: 15%; text-align: right;"}
+<h1 class="ucl-light-purple">1</h1>
+::::
+::::{style="display: inline-block; width: 5%;"}
+::::
+::::{style="display: inline-block; width: 75%;"}
+<h2>Imagination<br>and causal judgment</h2>
+::::
+
+::::{style="font-size: 3em; display: inline-block; width: 15%; text-align: right;"}
+<h1 class="ucl-light-purple">2</h1>
+::::
+::::{style="display: inline-block; width: 5%;"}
+::::
+::::{style="display: inline-block; width: 75%;"}
+<h2>Metacognition<br>about modal cognition</h2>
+::::
+
+::::{style="font-size: 3em; display: inline-block; width: 15%; text-align: right;"}
+<h1 class="ucl-light-purple">3</h1>
+::::
+::::{style="display: inline-block; width: 5%;"}
+::::
+::::{style="display: inline-block; width: 75%;"}
+<h2>Modal contributions<br>to metacognition</h2>
+::::
+::::
 
 
 
-# Future work
+## Coming soon...
 
 
-# Teaching
+## Teaching
 
+
+
+# Thank you {.dark}
 
 
 
