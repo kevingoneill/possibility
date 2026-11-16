@@ -198,6 +198,10 @@ absent <- '#b3b3b3'
 :::{.center-horizontally .container style="background-image: url('https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41562-017-0139/MediaObjects/41562_2017_Article_BFs415620170139_Fig1_HTML.jpg'); background-size: cover; background-position: left; width: 450px; height: 450px;"}
 :::
 
+:::{.bottom-left .tiny}
+@Peters2017
+:::
+
 
 ## Signal discrimination
 
@@ -304,6 +308,11 @@ $$ c = \invlogit{\lvert {\color{s1} x_1} - {\color{s2}
 x_2} \rvert} $$
 :::
 
+:::{.bottom-left style="font-size: .33em;"}
+@Kozyra2026
+:::
+
+
 
 ## Signal detection
 
@@ -387,14 +396,22 @@ p.detection <- ggplot(c_detection, aes(x=x1, y=x2)) +
 [$$ c \approx f\left(\textrm{max}\left({\color{s1} x_1}, {\color{s2} x_2}\right)\right) $$]{}
 :::
 
+:::{.bottom-left style="font-size: .33em;"}
+@Kozyra2026
+:::
+
 
 ## A problem
-
 
 ![](https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41562-017-0139/MediaObjects/41562_2017_Article_BFs415620170139_Fig3_HTML.jpg?as=webp){.center-horizontally .fragment width=800}
 
 
 [*Why does **discrimination** confidence resemble optimal **detection** confidence?*]{.center-text .absolute .center-horizontally bottom=50 width=800 .fragment}
+
+:::{.bottom-left .tiny}
+@Peters2017
+:::
+
 
 
 ## An idea
@@ -446,6 +463,11 @@ p.detection <- ggplot(c_detection, aes(x=x1, y=x2)) +
 
 [5, uncertain]{.absolute .much-smaller top=475 right=83}
 :::
+
+:::{.bottom-left .tiny}
+@Kozyra2026
+:::
+
 
 
 ## High-dimensional<br>signal detection theory
@@ -513,6 +535,10 @@ p.k.20 <- conf_plot(c, K=20) + theme(axis.title.y=element_blank())
 ::::
 :::
 
+:::{.bottom-left .tiny}
+@Kozyra2026
+:::
+
 
 
 ## Diminishing effect of unchosen evidence on confidence
@@ -525,7 +551,7 @@ p.k.20 <- conf_plot(c, K=20) + theme(axis.title.y=element_blank())
 #| fig-width: 12
 #| fig-height: 6
 
-peb_plot <- function(K=2) {
+peb_plot <- function(K=2, hide_peb=FALSE) {
   ## plot out beta values separately by k
   p.beta <- lms |>
     filter(as.integer(as.character(k)) <= K) |>
@@ -548,11 +574,15 @@ peb_plot <- function(K=2) {
     scale_y_continuous('Average Positive Evidence Bias\n(log scale)',
       limits=c(0, 3.75), expand=expansion()) +
     theme_light(18)
+
+  if (hide_peb) {
+    p.peb <- hide_plot(p.peb)
+  }
   
   p.beta + p.peb + plot_layout(widths=c(3, 2))
 }
 
-peb_plot(K=2)
+peb_plot(K=2, hide_peb=TRUE)
 ```
 ::::
 
@@ -562,9 +592,10 @@ peb_plot(K=2)
 #| fig-width: 12
 #| fig-height: 6
 
-peb_plot(K=5)
+peb_plot(K=2)
 ```
 ::::
+
 
 ::::{.fragment}
 ```{r}
@@ -572,7 +603,7 @@ peb_plot(K=5)
 #| fig-width: 12
 #| fig-height: 6
 
-peb_plot(K=10)
+peb_plot(K=5)
 ```
 ::::
 
@@ -582,9 +613,23 @@ peb_plot(K=10)
 #| fig-width: 12
 #| fig-height: 6
 
+peb_plot(K=10)
+```
+::::
+
+::::{.fragment}
+```{r}
+#| label: peb_5
+#| fig-width: 12
+#| fig-height: 6
+
 peb_plot(K=20)
 ```
 ::::
+:::
+
+:::{.bottom-left .tiny}
+@Kozyra2026
 :::
 
 
@@ -670,6 +715,14 @@ p.metad.20 <- k_metad_plot(K=20)
 ::::
 :::
 
+:::{.notes}
+planned experiment?
+:::
+
+:::{.bottom-left .tiny}
+@Kozyra2026
+:::
+
 
 
 ## Developing new measures of metacognition
@@ -684,29 +737,32 @@ p.metad.20 <- k_metad_plot(K=20)
 ::::
 :::
 
+:::{.bottom-left .tiny}
+@ONeill2026bias
+:::
+
+
 ## Developing new measures of metacognition
 
-:::{.r-stack}
-::::{.ucl-white-bg}
-![](_images/_confidence/fig_reliability_1-1.svg){width="100%" .fragment}
-::::
+![](_images/_confidence/fig_reliability.svg){.center-horizontally}
 
-::::{.ucl-white-bg}
-![](_images/_confidence/fig_reliability_2-1.svg){width="100%" .fragment}
-::::
-::::{.ucl-white-bg}
-![](_images/_confidence/fig_reliability_3-1.svg){width="100%" .fragment}
-::::
+:::{.bottom-left .tiny}
+@ONeill2026bias
 :::
+
 
 ## Developing new measures of metacognition
 
 ![](https://metacoglab.github.io/hmetad_tutorial/index_files/figure-html/fig-bias-mh-1.svg){width=600 .center-horizontally}
 
+:::{.bottom-left .tiny}
+@ONeill2026hmetad
+:::
+
+
 ## `hmetad`: an `R` package for hierarchical Bayesian modeling of confidence ratings {.dark}
 
 :::{.columns}
-
 ::::{.column .center-text }
 
 :::::{.tiny}
@@ -746,6 +802,10 @@ d |>
 ::::
 :::
 
+:::{.bottom-left .tiny}
+@ONeill2026hmetad
+:::
+
 
 
 # Interim summary {.dark}
@@ -762,7 +822,7 @@ d |>
 <ul>
     <li class="fragment" data-fragment-index=1>explains how confidence is affected by evidence</li>
     <li class="fragment" data-fragment-index=2>motivates the development of new statistical tools</li>
-    <li class="fragment" data-fragment-index=3>creates opportunities for other kinds of metacognition</li>
+    <li class="fragment" data-fragment-index=3>creates opportunities for studying other kinds of metacognition</li>
 </ul>
 :::
 

@@ -7,7 +7,7 @@
 :::
 
 :::{.ucl-pale-purple .tiny}
-Krasich, K., O’Neill, K., & De Brigard, F. (2024).<br>&emsp;&emsp;Looking at mental images: Eye‐tracking mental simulation during retrospective causal judgment.<br>&emsp;&emsp;*Cognitive Science.*
+Krasich, K.<sup>\*</sup>, O’Neill, K.<sup>\*</sup>, & De Brigard, F. (2024).<br>&emsp;&emsp;Looking at mental images: Eye‐tracking mental simulation during retrospective causal judgment.<br>&emsp;&emsp;*Cognitive Science.*
 
 Henne, P., & O'Neill, K. (2022).<br>&emsp;&emsp;Double prevention, causal judgments, and counterfactuals. *Cognitive science.*
 
@@ -17,18 +17,283 @@ Quillien, T., O’Neill, K., & Henne, P. (2025).<br>&emsp;&emsp;A counterfactual
 :::
 
 
+## Counterfactual thinking {.dark}
+
+:::{style="font-size: 3em"}
+::::{.circle .ucl-light-purple-bg .absolute width=150 height=150 top=100 left=200}
+<i class="fa-solid fa-plane"></i>
+::::
+
+::::{.circle .ucl-light-purple-bg .absolute width=150 height=150 bottom=100 left=200 .fragment .custom .highlight fragment-index=2}
+<i class="fa-solid fa-ban"></i>
+::::
+
+::::{.absolute .center-horizontally top=200 style="rotate: 20deg;"}
+<i class="fa-solid fa-arrow-right-long"></i>
+::::
+
+::::{.absolute .center-horizontally bottom=200 style="rotate: -20deg;"}
+<i class="fa-solid fa-arrow-right-long"></i>
+::::
+
+::::{.circle .ucl-light-purple-bg .absolute width=150 height=150 right=200 .center-vertically}
+<i class="fa-solid fa-music"></i>
+::::
+:::
 
 
+:::{.much-smaller .ucl-light-orange .center-text .absolute right=150 top=150 width=300 .fragment fragment-index=1}
+*What caused you to miss the concert?*
+:::
 
-
-
-
-
-
-## Can we find concrete evidence of counterfactual thinking?
+## Counterfactual thinking
 
 :::{.columns}
+::::{.column width="20%"}
+::::{.center-vertically .center-text}
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;" .fragment fragment-index=1}
+[<i class="fa-solid fa-ban"></i>]{.ucl-light-blue}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-orange}
+:::
 
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;" .fragment fragment-index=2}
+[<i class="fa-solid fa-ban"></i>]{.ucl-light-blue}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+:::
+
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;" .fragment fragment-index=3}
+[<i class="fa-solid fa-ban"></i>]{.ucl-light-blue}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-orange}
+:::
+
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;" .fragment fragment-index=4}
+[<i class="fa-solid fa-ban"></i>]{.ucl-light-blue}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+:::
+
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;" .fragment fragment-index=4}
+[<i class="fa-solid fa-ban"></i>]{.ucl-light-blue}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-orange}
+:::
+
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;" .fragment fragment-index=4}
+[<i class="fa-solid fa-ban"></i>]{.ucl-light-blue}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-orange}
+:::
+::::
+::::
+
+::::{.column width="15%"}
+::::{.center-vertically .center-text style="font-size: 6em;" .fragment fragment-index=6}
+\-
+::::
+::::
+
+::::{.column width="20%"}
+::::{.center-vertically .center-text .fragment fragment-index=5}
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
+[<i class="fa-solid fa-ban"></i>]{.ucl-light-orange}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+:::
+
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
+[<i class="fa-solid fa-ban"></i>]{.ucl-light-orange}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-orange}
+:::
+
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
+[<i class="fa-solid fa-ban"></i>]{.ucl-light-orange}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+:::
+
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
+[<i class="fa-solid fa-ban"></i>]{.ucl-light-orange}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+:::
+
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
+[<i class="fa-solid fa-ban"></i>]{.ucl-light-orange}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+:::
+
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
+[<i class="fa-solid fa-ban"></i>]{.ucl-light-orange}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+:::
+::::
+::::
+
+::::{.column width="15%" .fragment fragment-index=6}
+::::{.center-vertically .center-text style="font-size: 6em;"}
+=
+::::
+::::
+
+::::{.column width="20%"}
+::::{.center-vertically .center-text .fragment fragment-index=6}
+*"The flight cancellations caused me to miss the concert"*
+::::
+::::
+:::
+
+## Counterfactual thinking
+
+:::{.columns}
+::::{.column width="20%"}
+::::{.center-vertically .center-text}
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
+[<i class="fa-solid fa-plane"></i>]{.ucl-light-blue}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+:::
+
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
+[<i class="fa-solid fa-plane"></i>]{.ucl-light-blue}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+:::
+
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
+[<i class="fa-solid fa-plane"></i>]{.ucl-light-blue}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-orange}
+:::
+
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
+[<i class="fa-solid fa-plane"></i>]{.ucl-light-blue}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+:::
+
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
+[<i class="fa-solid fa-plane"></i>]{.ucl-light-blue}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+:::
+
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
+[<i class="fa-solid fa-plane"></i>]{.ucl-light-blue}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+:::
+::::
+::::
+
+::::{.column width="15%"}
+::::{.center-vertically .center-text style="font-size: 6em;" .fragment fragment-index=2}
+\-
+::::
+::::
+
+::::{.column width="20%"}
+::::{.center-vertically .center-text .fragment fragment-index=1}
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
+[<i class="fa-solid fa-plane"></i>]{.ucl-light-orange}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+:::
+
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
+[<i class="fa-solid fa-plane"></i>]{.ucl-light-orange}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+:::
+
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
+[<i class="fa-solid fa-plane"></i>]{.ucl-light-orange}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+:::
+
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
+[<i class="fa-solid fa-plane"></i>]{.ucl-light-orange}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+:::
+
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
+[<i class="fa-solid fa-plane"></i>]{.ucl-light-orange}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-orange}
+:::
+
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
+[<i class="fa-solid fa-plane"></i>]{.ucl-light-orange}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+:::
+::::
+::::
+
+::::{.column width="15%" .fragment fragment-index=2}
+::::{.center-vertically .center-text style="font-size: 6em;"}
+=
+::::
+::::
+
+::::{.column width="20%"}
+::::{.center-vertically .center-text .fragment fragment-index=2}
+*"Traveling by plane didn't cause me to miss the concert"*
+::::
+::::
+:::
+
+
+## Counterfactual simulation model
+
+:::{.much-larger}
+$$P(E \;\vert\; do(C)) - P(E \;\vert\; do(\neg C))$$
+:::
+
+:::{.notes}
+add references
+:::
+
+## Two concepts of causation
+
+<br>
+
+:::{.columns}
+::::{.column width="47%"}
+:::::{.box .fragment}
+Modal concept
+
+[Effects depend on their causes]{style="font-size: 0.66em;"}
+:::::
+::::
+
+::::{.column width="5%"}
+::::
+
+::::{.column width="47%"}
+:::::{.box .fragment}
+Productive concept
+
+[Causes interact with their effects]{style="font-size: 0.66em;"}
+:::::
+
+::::
+:::
+
+[*Can we find evidence of counterfactual thinking?*]{.center-horizontally style="bottom: 125px;" .fragment}
+
+
+
+## Eye movements and<br>counterfactual imagery
+
+:::{.columns}
 ::::{.column width="50%"}
 ![](_images/_eye_tracking/gerstenberg.jpg){width="100%" .fragment fragment-index=1}
 ::::
@@ -48,6 +313,10 @@ Quillien, T., O’Neill, K., & Henne, P. (2025).<br>&emsp;&emsp;A counterfactual
 ::::
 :::
 
+:::{.bottom-left .tiny}
+@Bone2019; @Gerstenberg2017
+:::
+
 
 ## Methods
 
@@ -61,6 +330,10 @@ Quillien, T., O’Neill, K., & Henne, P. (2025).<br>&emsp;&emsp;A counterfactual
   <source src="_images/_eye_tracking/right_score.mp4" type="video/mp4">
 </video>
 ```
+
+:::{.bottom-left .tiny}
+@Krasich2024
+:::
 
 
 ## Methods
@@ -81,14 +354,50 @@ Quillien, T., O’Neill, K., & Henne, P. (2025).<br>&emsp;&emsp;A counterfactual
 ![](_images/_eye_tracking/design_7.svg){.center-xy width=1000 .fragment}
 :::
 
+:::{.bottom-left .tiny}
+@Krasich2024
+:::
 
 ## Hypotheses
 
-:::{.notes}
-* process theories vs dependence theories
+<br>
+
+:::{.columns}
+::::{.column width="47%"}
+:::::{.box}
+Modal concept
+
+[Effects depend on their causes]{style="font-size: 0.66em;"}
+:::::
+
+<br>
+
+:::::{.much-smaller .fragment .box .ucl-white-bg}
+Fixations during causal judgment should mix remembering and counterfactual imagery
+:::::
+::::
+
+::::{.column width="5%"}
+::::
+
+::::{.column width="47%"}
+:::::{.box}
+Productive concept
+
+[Causes interact with their effects]{style="font-size: 0.66em;"}
+:::::
+
+<br>
+
+:::::{.much-smaller .fragment .box .ucl-white-bg}
+Fixations during causal judgment should resemble remembering
+:::::
+::::
 :::
 
-
+:::{.bottom-left .tiny}
+@Krasich2024
+:::
 
 
 ## Eye movements reveal counterfactual thinking
@@ -129,6 +438,9 @@ Quillien, T., O’Neill, K., & Henne, P. (2025).<br>&emsp;&emsp;A counterfactual
 :::{.ucl-white-bg .fragment .fade-out fragment-index=5 .absolute style="width: 325px; height: 300px; right: 0px; top: 250px;"}
 :::
 
+:::{.bottom-left .tiny}
+@Krasich2024
+:::
 
 
 
@@ -162,6 +474,9 @@ Quillien, T., O’Neill, K., & Henne, P. (2025).<br>&emsp;&emsp;A counterfactual
 :::{.ucl-white-bg .fragment .fade-out fragment-index=3 .absolute style="width: 325px; height: 300px; right: 0px; top: 250px;"}
 :::
 
+:::{.bottom-left .tiny}
+@Krasich2024
+:::
 
 
 
@@ -335,24 +650,7 @@ draws.post <- ns |>
 
 :::{.columns}
 ::::{.column width="47%"}
-:::::{.box .fragment}
-Productive concept
-
-[Causes interact with their effects]{style="font-size: 0.66em;"}
-:::::
-
-<br>
-
-:::::{.much-smaller .fragment .box .ucl-white-bg}
-The thief (but not the hacker) caused the data breach
-:::::
-::::
-
-::::{.column width="5%"}
-::::
-
-::::{.column width="47%"}
-:::::{.box .fragment}
+:::::{.box .fragment fragment-index=3 .strike}
 Modal concept
 
 [Effects depend on their causes]{style="font-size: 0.66em;"}
@@ -360,13 +658,30 @@ Modal concept
 
 <br>
 
-:::::{.much-smaller .fragment .box .ucl-white-bg}
-[Both the thief and the hacker caused the data breach]{.fragment .strike}
+:::::{.much-smaller .fragment fragment-index=1 .box .ucl-white-bg}
+[Both the thief and the hacker caused the data breach]{.fragment fragment-index=3 .strike}
+:::::
+::::
+
+::::{.column width="5%"}
+::::
+
+::::{.column width="47%"}
+:::::{.box}
+Productive concept
+
+[Causes interact with their effects]{style="font-size: 0.66em;"}
+:::::
+
+<br>
+
+:::::{.much-smaller .fragment fragment-index=2 .box .ucl-white-bg}
+The thief (but not the hacker) caused the data breach
 :::::
 ::::
 :::
 
-[*Is this the full story?*]{.center-horizontally style="bottom: 75px;" .fragment}
+[*Is this the full story?*]{.center-horizontally style="bottom: 75px;" .fragment fragment-index=4}
 
 
 ## Methods
@@ -528,7 +843,11 @@ Please describe what<br>you imagine.
 ::::::
 :::::
 ::::
+:::
 
+
+:::{.bottom-left .tiny}
+@Henne2022
 :::
 
 
@@ -645,6 +964,10 @@ p_dp_cause +
 ::::
 
 ![](_images/_double_prevention/ethan.jpg){.absolute .translateXY style="width: 100px; height: 100px; right: 125px; top: 450px;"}
+:::
+
+:::{.bottom-left .tiny}
+@Henne2022
 :::
 
 
@@ -797,6 +1120,9 @@ p.dp.cft +
 :::
 
 
+:::{.bottom-left .tiny}
+@Henne2022; @ONeill2022DoublePrevention
+:::
 
 
 
@@ -836,6 +1162,9 @@ p.dp.cft +
 :::
 
 
+:::{.bottom-left .tiny}
+@ONeill2025DoublePrevention
+:::
 
 
 
@@ -850,9 +1179,9 @@ p.dp.cft +
 ![](_images/_double_prevention/time.svg){.fragment .absolute left="10%" width=600}
 
 
-
-
-
+:::{.bottom-left .tiny}
+@Quillien2025
+:::
 
 
 

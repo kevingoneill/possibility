@@ -412,12 +412,14 @@ $mermaid-node-fg-color: $ucl-dark-purple;
 
 .translateX {
     margin: 0;
+    position: absolute;
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
 }
 
 .translateY {
     margin: 0;
+    position: absolute;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
@@ -537,5 +539,5 @@ slides section .fragment  {
 }
 
 .reveal .slides section .fragment.highlight.visible {
-    background-color: $ucl-mid-purple !important;
+    background-color: $ucl-light-orange !important;
 }

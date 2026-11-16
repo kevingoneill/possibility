@@ -13,7 +13,36 @@ O'Neill, K., Henne, P., Pearson, J., & De Brigard, F. (2024).<br>&emsp;&emsp;Mod
 :::
 
 
-## Return to original example...
+## Confidence in causal judgments
+
+:::{style="font-size: 3em"}
+::::{.circle .ucl-light-purple-bg .absolute width=150 height=150 top=100 left=200}
+<i class="fa-solid fa-plane"></i>
+::::
+
+::::{.circle .ucl-light-orange-bg .absolute width=150 height=150 bottom=100 left=200}
+<i class="fa-solid fa-ban"></i>
+::::
+
+::::{.absolute .center-horizontally top=200 style="rotate: 20deg;"}
+<i class="fa-solid fa-arrow-right-long"></i>
+::::
+
+::::{.absolute .center-horizontally bottom=200 style="rotate: -20deg;"}
+<i class="fa-solid fa-arrow-right-long"></i>
+::::
+
+::::{.circle .ucl-light-purple-bg .absolute width=150 height=150 right=200 .center-vertically}
+<i class="fa-solid fa-music"></i>
+::::
+:::
+
+
+:::{.much-smaller .ucl-light-orange .center-text .absolute right=150 top=150 width=300}
+*What caused you to miss the concert?*
+:::
+
+
 
 
 
@@ -258,6 +287,37 @@ predictions_gradation <- data_gradation |>
 
 ## Methods
 
+:::{.columns}
+::::{.column width="60%"}
+:::::{.center-vertically}
+![](_images/_gradation/stimulus.png){style="width: 60%" .fragment fragment-index=1}
+:::::
+
+:::::{.ucl-white-bg .absolute top=295 left=135 width=355 height=275 .fragment .fade-out fragment-index=2}
+:::::
+
+:::::{.ucl-light-blue-outline .absolute top=229 left=217 width=25 height=25 style="border-radius: 5px; padding: 4px;" .fragment fragment-index=3}
+:::::
+:::::{.ucl-light-blue-outline .absolute top=229 left=542 width=25 height=25 style="border-radius: 5px; padding: 4px;" .fragment fragment-index=3}
+:::::
+::::
+
+::::{.column .much-smaller width="40%"}
+:::::{.center-vertically}
+[To what extent did Joe win the dollar because he drew [the green ball]{.ucl-light-green}?]{.fragment fragment-index=4}
+
+[How confident are you in your response?]{.fragment fragment-index=5}
+:::::
+::::
+:::
+
+:::{.bottom-left .tiny}
+@ONeill2022
+:::
+
+
+## Methods
+
 :::{.r-stack}
 ::::{}
 ```{.tikz width=800}
@@ -355,6 +415,11 @@ predictions_gradation <- data_gradation |>
 ::::
 :::
 
+:::{.bottom-left .tiny}
+@ONeill2022
+:::
+
+
 
 ## [Confidence predicts causal judgments]{style="position: relative; z-index: 999;"}
 
@@ -392,6 +457,11 @@ gradation_plot()
 :::{.ucl-white-bg .absolute width=325 height=325 top=255 left=289 .fragment .fade-out fragment-index=2}
 :::
 
+:::{.bottom-left .tiny}
+@ONeill2022
+:::
+
+
 
 ## [Confidence predicts variability in causal judgments]{style="position: relative; z-index: 999;"}
 
@@ -424,6 +494,9 @@ p.sd + geom_line(aes(color=MC_resp), linewidth=2) +
 ```
 :::
 
+:::{.bottom-left .tiny}
+@ONeill2022
+:::
 
 
 
@@ -522,37 +595,360 @@ theme_cft <- function(var='Causal Judgment', base_size=18, ...) {
 }
 ```
 
-## Modeling confidence in causal judgments
+## Confidence in causal judgments
+
+:::{.columns .fragment fragment-index=1}
+::::{.column width="20%"}
+::::{.center-vertically .center-text}
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
+[<i class="fa-solid fa-ban"></i>]{.ucl-light-blue}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-orange}
+:::
+
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
+[<i class="fa-solid fa-ban"></i>]{.ucl-light-blue}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+:::
+
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
+[<i class="fa-solid fa-ban"></i>]{.ucl-light-blue}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-orange}
+:::
+
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
+[<i class="fa-solid fa-ban"></i>]{.ucl-light-blue}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+:::
+
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
+[<i class="fa-solid fa-ban"></i>]{.ucl-light-blue}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-orange}
+:::
+
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
+[<i class="fa-solid fa-ban"></i>]{.ucl-light-blue}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-orange}
+:::
+::::
+::::
+
+::::{.column width="15%"}
+::::{.center-vertically .center-text style="font-size: 6em;" .fragment .fade-out fragment-index=2}
+```{=html}
+-
+```
+::::
+
+::::{.center-vertically .center-text style="font-size: 1.33em;" .fragment fragment-index=2}
+:::{.box .ucl-white-bg style="width: 125px; margin: 10px; padding: 5px;"}
+```{=html}
+-
+```
+:::
+
+:::{.box .ucl-white-bg style="width: 125px; margin: 10px; padding: 5px;"}
+```{=html}
+-
+```
+:::
+
+:::{.box .ucl-white-bg style="width: 125px; margin: 10px; padding: 5px;"}
+```{=html}
+-
+```
+:::
+
+:::{.box .ucl-white-bg style="width: 125px; margin: 10px; padding: 5px;"}
+```{=html}
+-
+```
+:::
+
+:::{.box .ucl-white-bg style="width: 125px; margin: 10px; padding: 5px;"}
+```{=html}
+-
+```
+:::
+
+:::{.box .ucl-white-bg style="width: 125px; margin: 10px; padding: 5px;"}
+```{=html}
+-
+```
+:::
+::::
+::::
+
+::::{.column width="20%"}
+::::{.center-vertically .center-text}
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
+[<i class="fa-solid fa-ban"></i>]{.ucl-light-orange}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+:::
+
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
+[<i class="fa-solid fa-ban"></i>]{.ucl-light-orange}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-orange}
+:::
+
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
+[<i class="fa-solid fa-ban"></i>]{.ucl-light-orange}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+:::
+
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
+[<i class="fa-solid fa-ban"></i>]{.ucl-light-orange}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+:::
+
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
+[<i class="fa-solid fa-ban"></i>]{.ucl-light-orange}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+:::
+
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
+[<i class="fa-solid fa-ban"></i>]{.ucl-light-orange}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+:::
+::::
+::::
+
+::::{.column width="15%"}
+::::{.center-vertically .center-text style="font-size: 6em;"}
+=
+::::
+::::
+
+::::{.column width="20%"}
+:::::{.center-vertically .center-text .fragment .fade-out fragment-index=3}
+*"The flight cancellations caused me to miss the concert"*
+:::::
+
+:::::{.center-vertically .center-text .fragment fragment-index=3}
+*"I'm confident that the flight cancellations caused me to miss the concert"*
+:::::
+::::
+:::
 
 
+## Confidence in causal judgments
+
+:::{.columns}
+::::{.column width="20%"}
+::::{.center-vertically .center-text}
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
+[<i class="fa-solid fa-plane"></i>]{.ucl-light-blue}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+:::
+
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
+[<i class="fa-solid fa-plane"></i>]{.ucl-light-blue}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+:::
+
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
+[<i class="fa-solid fa-plane"></i>]{.ucl-light-blue}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-orange}
+:::
+
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
+[<i class="fa-solid fa-plane"></i>]{.ucl-light-blue}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+:::
+
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
+[<i class="fa-solid fa-plane"></i>]{.ucl-light-blue}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+:::
+
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
+[<i class="fa-solid fa-plane"></i>]{.ucl-light-blue}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+:::
+::::
+::::
+
+::::{.column width="15%"}
+::::{.center-vertically .center-text style="font-size: 6em;" .fragment .fade-out fragment-index=1}
+```{=html}
+-
+```
+::::
+
+::::{.center-vertically .center-text style="font-size: 1.33em;" .fragment fragment-index=1}
+:::{.box .ucl-white-bg style="width: 125px; margin: 10px; padding: 5px;"}
+```{=html}
+-
+```
+:::
+
+:::{.box .ucl-white-bg style="width: 125px; margin: 10px; padding: 5px;"}
+```{=html}
+-
+```
+:::
+
+:::{.box .ucl-white-bg style="width: 125px; margin: 10px; padding: 5px;"}
+```{=html}
+-
+```
+:::
+
+:::{.box .ucl-white-bg style="width: 125px; margin: 10px; padding: 5px;"}
+```{=html}
+-
+```
+:::
+
+:::{.box .ucl-white-bg style="width: 125px; margin: 10px; padding: 5px;"}
+```{=html}
+-
+```
+:::
+
+:::{.box .ucl-white-bg style="width: 125px; margin: 10px; padding: 5px;"}
+```{=html}
+-
+```
+:::
+::::
+::::
+
+::::{.column width="20%"}
+::::{.center-vertically .center-text}
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
+[<i class="fa-solid fa-plane"></i>]{.ucl-light-orange}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+:::
+
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
+[<i class="fa-solid fa-plane"></i>]{.ucl-light-orange}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+:::
+
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
+[<i class="fa-solid fa-plane"></i>]{.ucl-light-orange}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+:::
+
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
+[<i class="fa-solid fa-plane"></i>]{.ucl-light-orange}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+:::
+
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
+[<i class="fa-solid fa-plane"></i>]{.ucl-light-orange}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-orange}
+:::
+
+:::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
+[<i class="fa-solid fa-plane"></i>]{.ucl-light-orange}
+<i class="fa-solid fa-arrow-right-long"></i>
+[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+:::
+::::
+::::
+
+::::{.column width="15%"}
+::::{.center-vertically .center-text style="font-size: 6em;"}
+=
+::::
+::::
+
+::::{.column width="20%"}
+:::::{.center-vertically .center-text .fragment .fade-out fragment-index=1}
+*"Traveling by plane didn't cause me to miss the concert"*
+:::::
+
+:::::{.center-vertically .center-text .fragment fragment-index=1}
+*"I'm unsure whether traveling by plane caused me to miss the concert"*
+:::::
+::::
+:::
 
 
+## Confidence in causal judgments
+
+:::{.center-xy}
+```{r}
+#| label: conf_cause_1
+#| fig-width: 5
+#| fig-height: 4
+p_conf_cause <- tibble(cause=seq(0, 1, by=.001)) |>
+  mutate(conf = 1 - sqrt(cause*(1-cause))) |>
+  ggplot(aes(x=cause, y=conf)) +
+  xlab('Predicted mean\ncausal judgment') +
+  ylab('Predicted mean\nconfidence') +
+  coord_fixed(ratio=2) +
+  theme_classic(18) +
+  theme(
+    axis.text=element_blank(),
+    axis.ticks=element_blank()
+  )
+
+p_conf_cause
+```
+:::
+
+:::{.center-xy .fragment}
+```{r}
+#| label: conf_cause_2
+#| fig-width: 5
+#| fig-height: 4
+p_conf_cause +
+  geom_line(color=ucl_mid_purple)
+```
+:::
 
 ## Methods
 
 :::{.columns}
 ::::{.column width="60%"}
 :::::{.center-vertically}
-![](_images/_gradation/stimulus.png){style="width: 60%" .fragment fragment-index=1}
+![](_images/_gradation/stimulus.png){style="width: 60%"}
 :::::
 
-:::::{.ucl-white-bg .absolute top=295 left=135 width=355 height=275 .fragment .fade-out fragment-index=2}
+:::::{.ucl-light-blue-outline .absolute top=229 left=217 width=25 height=25 style="border-radius: 5px; padding: 4px;"}
 :::::
-
-:::::{.ucl-light-blue-outline .absolute top=229 left=217 width=25 height=25 style="border-radius: 5px; padding: 4px;" .fragment fragment-index=3}
-:::::
-:::::{.ucl-light-blue-outline .absolute top=229 left=542 width=25 height=25 style="border-radius: 5px; padding: 4px;" .fragment fragment-index=3}
+:::::{.ucl-light-blue-outline .absolute top=229 left=542 width=25 height=25 style="border-radius: 5px; padding: 4px;"}
 :::::
 ::::
 
 ::::{.column .much-smaller width="40%"}
 :::::{.center-vertically}
-[To what extent did Joe win the dollar because he drew [the green ball]{.ucl-light-green}?]{.fragment fragment-index=4}
+To what extent did Joe win the dollar because he drew [the green ball]{.ucl-light-green}?
 
-[How confident are you in your response?]{.fragment fragment-index=5}
+How confident are you in your response?
 :::::
 ::::
 :::
+
+:::{.bottom-left .tiny}
+@ONeill2024
+:::
+
 
 
 ## Normality affects<br>causal judgments
@@ -669,6 +1065,9 @@ p_ns_cause <- d_ns |>
 ```
 :::
 
+:::{.bottom-left .tiny}
+@ONeill2024
+:::
 
 
 ## Normality affects confidence
@@ -785,6 +1184,9 @@ p_ns_conf <- d_ns |>
 ```
 :::
 
+:::{.bottom-left .tiny}
+@ONeill2024
+:::
 
 
 

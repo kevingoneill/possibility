@@ -78,7 +78,7 @@ source("_assets/plotting.R")
 ::::
 
 ::::{.fragment fragment-index=6}
-:::::{.circle .ucl-light-purple-bg .absolute width=150 height=150 bottom=100 left=200 .fragment .custom .highlight fragment-index=8}
+:::::{.circle .ucl-light-purple-bg .absolute width=150 height=150 bottom=100 left=200}
 <i class="fa-solid fa-ban"></i>
 :::::
 ::::
@@ -96,16 +96,49 @@ source("_assets/plotting.R")
 ::::
 :::
 
-:::{.much-smaller .ucl-mid-purple .center-text .absolute right=150 top=150 width=300 .fragment fragment-index=7}
-*What caused you to miss the concert?*
+## {.dark}
+
+:::{.columns .larger}
+::::{.column width="50%"}
+:::::{.center-vertically .center-text style="width: 40%;"}
+*"if only..."*
+
+*"...might..."*
+
+*"what if..."*
+
+*"I could..."*
+:::::
+::::
+
+::::{.column width="20%"}
+::::
+
+::::{.column width="30%"}
+:::::{.center-vertically}
+[Emotion]{.fragment fragment-index=1}
+
+[Explanation]{.fragment fragment-index=2}
+
+[Blame]{.fragment fragment-index=3}
+
+[Prediction]{.fragment fragment-index=4}
+
+[Intervention]{.fragment fragment-index=5}
+:::::
+::::
 :::
+
+[<i class="fa-solid fa-angles-right"></i>]{.center-xy .ucl-light-purple style="font-size: 8em;" .fragment fragment-index=1}
+
+
 
 ## My focus {.dark}
 
 :::{.columns}
-::::{.column width="75%"}
+::::{.column width="60%"}
 ::::{.r-stack}
-:::::{.fragment}
+:::::{.ucl-dark-purple-bg .center-vertically style="width: 60%;" .fragment fragment-index=1}
 ```{.tikz width=800}
 %%| filename: focus_1
 %%| additionalPackages: \usepackage{cmbright}
@@ -120,7 +153,7 @@ source("_assets/plotting.R")
 ```
 :::::
 
-:::::{.fragment}
+:::::{.ucl-dark-purple-bg .center-vertically style="width: 60%;" .fragment fragment-index=2}
 ```{.tikz width=800}
 %%| filename: focus_2
 %%| additionalPackages: \usepackage{cmbright}
@@ -135,7 +168,7 @@ source("_assets/plotting.R")
 ```
 :::::
 
-:::::{.fragment}
+:::::{.ucl-dark-purple-bg .center-vertically style="width: 60%;" .fragment fragment-index=3}
 ```{.tikz width=800}
 %%| filename: focus_3
 %%| additionalPackages: \usepackage{cmbright}
@@ -150,7 +183,7 @@ source("_assets/plotting.R")
 ```
 :::::
 
-:::::{.fragment}
+:::::{.ucl-dark-purple-bg .center-vertically style="width: 60%;" .fragment fragment-index=4}
 ```{.tikz width=800}
 %%| filename: focus_4
 %%| additionalPackages: \usepackage{cmbright}
@@ -167,11 +200,13 @@ source("_assets/plotting.R")
 ::::
 ::::
 
-::::{.column width="25%" .much-smaller}
-:::::{.center-vertically .incremental}
-* behavior
-* computational models
-* Bayesian statistics
+::::{.column width="40%" .much-smaller}
+:::::{.box .center-vertically .fragment fragment-index=5}
+<ul>
+    <li class="fragment" data-fragment-index=5>behavior</li>
+    <li class="fragment" data-fragment-index=6>computational models</li>
+    <li class="fragment" data-fragment-index=7>Bayesian statistics</li>
+</ul>
 :::::
 ::::
 :::
@@ -180,7 +215,7 @@ source("_assets/plotting.R")
 # {.dark}
 
 :::{.much-smaller}
-::::{.fragment}
+::::{}
 :::::{style="font-size: 3em; display: inline-block; width: 15%; text-align: right;"}
 <h1 class="ucl-light-purple">1</h1>
 :::::
@@ -253,23 +288,162 @@ source("_assets/plotting.R")
 
 
 
-## Coming soon...
+## Looking forward
+
+```{=html}
+<br>
+```
+
+:::{.columns}
+::::{.column style="width: 27%; height: 450px;" .box}
+Expanding the breadth of metacognition
+
+:::::{.much-smaller}
+- moral reasoning
+- planning
+- ...
+:::::
+::::
+
+::::{.column width="2%"}
+::::
+
+::::{.column style="width: 27%; height: 450px;" .box}
+Metacognitive control
+
+:::::{.much-smaller}
+- information-seeking
+- social coordination
+- ...
+:::::
+::::
+
+::::{.column width="2%"}
+::::
 
 
-## Teaching
+::::{.column style="width: 27%; height: 450px;" .box}
+Real world impact
+
+:::::{.much-smaller}
+- causal judgment "in the wild"
+- clinical applications
+- ...
+:::::
+::::
+:::
 
 
 
-# Thank you {.dark}
+
+## {.dark}
+
+:::{.absolute top=0 left=0 width=200 .center-text .much-smaller}
+::::{.center-horizontally .container style="background-image: url('https://www.macfound.org/media/fellows/profile_photos/de_brigard_2026_profile-280.jpg'); background-size: cover; background-position: center; border-radius: 50%; width: 150px; height: 150px;"}
+::::
+
+<br><br><br><br>
+
+Felipe<br>De Brigard
+:::
+
+:::{.absolute top=0 left=200 width=200 .center-text .much-smaller}
+::::{.center-horizontally .container style="background-image: url('https://pearsonlab.github.io/images/john.png'); background-size: cover; background-position: center; border-radius: 50%; width: 150px; height: 150px;"}
+::::
+
+<br><br><br><br>
+
+John<br>Pearson
+:::
+
+:::{.absolute top=0 left=400 width=200 .center-text .much-smaller}
+::::{.center-horizontally .container style="background-image: url('https://images.squarespace-cdn.com/content/v1/54d50bb5e4b08e57d717ce7c/7ee08bc0-ad81-48cc-bd93-788a0c8c9d7f/231206_PaulHenne.jpg'); background-size: cover; background-position: center; border-radius: 50%; width: 150px; height: 150px;"}
+::::
+
+<br><br><br><br>
+
+Paul<br>Henne
+:::
+
+:::{.absolute top=0 left=600 width=200 .center-text .much-smaller}
+::::{.center-horizontally .container style="background-image: url('https://krasichlab.wordpress.com/wp-content/uploads/2025/04/kristina_krasich-1-edited.jpg'); background-size: cover; background-position: center; border-radius: 50%; width: 150px; height: 150px;"}
+::::
+
+<br><br><br><br>
+
+Kristina<br>Krasich
+:::
+
+:::{.absolute top=0 left=800 width=200 .center-text .much-smaller}
+::::{.center-horizontally .container style="background-image: url('https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=72lZt54AAAAJ&citpid=2'); background-size: cover; background-position: center; border-radius: 50%; width: 150px; height: 150px;"}
+::::
+
+<br><br><br><br>
+
+Paul<br>Bello
+:::
+
+:::{.absolute top=300 left=0 width=200 .center-text .much-smaller}
+::::{.center-horizontally .container style="background-image: url('https://quillienlab.github.io/Quillien_copenhagen.jpg'); background-size: cover; background-position: right; border-radius: 50%; width: 150px; height: 150px;"}
+::::
+
+<br><br><br><br>
+
+Tadeg<br>Quillien
+:::
+
+
+:::{.absolute top=300 left=200 width=200 .center-text .much-smaller}
+::::{.center-horizontally .container style="background-image: url('https://philosophy.stanford.edu/sites/philosophy/files/styles/hs_medium_square_360x360/public/media/image/TIcard-photo.jpg.webp'); background-size: cover; background-position: right; border-radius: 50%; width: 150px; height: 150px;"}
+::::
+
+<br><br><br><br>
+
+Thomas<br>Icard
+:::
 
 
 
-## References
 
-**NEED TO ADD**
+:::{.absolute top=300 left=400 width=200 .center-text .much-smaller}
+::::{.center-horizontally .container style="background-image: url('https://images.squarespace-cdn.com/content/v1/5616b377e4b0670f148ff742/2ae89835-9143-4c93-a8a7-3a203337b812/steve.png'); background-size: cover; background-position: right; border-radius: 50%; width: 150px; height: 150px;"}
+::::
+
+<br><br><br><br>
+
+Stephen M<br>Fleming
+:::
+
+
+:::{.absolute top=300 left=600 width=200 .center-text .much-smaller}
+::::{.center-horizontally .container style="background-image: url('https://images.squarespace-cdn.com/content/v1/5616b377e4b0670f148ff742/2d724e06-d225-4040-8783-b5e0da6f5ab5/tianqi.png'); background-size: cover; background-position: right; border-radius: 50%; width: 150px; height: 150px;"}
+::::
+
+<br><br><br><br>
+
+Tianqi<br>Zhan
+:::
+
+:::{.absolute top=300 left=800 width=200 .center-text .much-smaller}
+::::{.center-horizontally .container style="background-image: url('https://avatars.githubusercontent.com/u/224422419?v=4'); background-size: cover; background-position: right; border-radius: 50%; width: 150px; height: 150px;"}
+::::
+
+<br><br><br><br>
+
+Wiktoria<br>Kozyra
+:::
+
+
+```{=html}
+<h1 class="bottom-left larger">Thank you!</h1>
+```
+
+![](https://www.onr.navy.mil/themes/custom/onr/logo.png){.absolute .bottom height=100 left=585}
+![](https://thumb.wikimedia.org/wikipedia/en/thumb/e/e9/European_Research_Council_logo.svg/500px-European_Research_Council_logo.svg.png){.absolute .bottom height=100 left=850 .ucl-white-bg}
+
+
+## References {.dark}
 
 ::: {#refs}
 :::
 
-
-## Back-up slides
