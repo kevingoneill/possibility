@@ -3,7 +3,9 @@ index.html
 **/index_cache/
 *.aux
 _models/*.rds
-
+_site
 
 # temporary files
 **/*.*~
+/.quarto/
+**/*.quarto_ipynb

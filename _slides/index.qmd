@@ -1,0 +1,275 @@
+---
+title: Possibility in confidence<br>and cognition
+format:
+  ucl-revealjs:
+    code-line-numbers: false
+    pdf-separate-fragments: true
+    include-in-header:
+      - file: mathjax-color.html
+author: 
+  name: Kevin O'Neill
+  affiliation: 
+    name: University College London
+    department: Department of Experimental Psychology<br>Institute of Cognitive Neuroscience
+    url: https://kevingoneill.github.io
+  degrees: PhD
+  orcid: 0000-0001-7401-9802
+  url: https://www.ucl.ac.uk
+  
+bibliography: references.bib
+
+# enable tikz figures
+filters:
+  - tikz
+tikz:
+  cache: true
+  save-tex: false
+  svg-command: "pdf2svg {input} {output}" # use pdf2svg because inkscape breaks fonts
+
+execute:
+  cache: true
+
+knitr:
+  opts_chunk:
+    collapse: true
+    dev: svglite
+
+#embed-resources: true  # use this option for publication
+---
+
+:::{.content-hidden}
+% define an operator for argmax/argmin
+\DeclareMathOperator*{\argmax}{argmax}
+\DeclareMathOperator*{\argmin}{argmin}
+
+\newcommand{\logit}[1]{\textrm{logit}\left(#1\right)}
+\newcommand{\invlogit}[1]{\textrm{logit}^{-1}\left(#1\right)}
+:::
+
+```{r}
+#| label: libraries
+#| include: false
+#| cache: false
+
+library(tidyverse)
+library(brms)
+library(ggdist)
+library(tidybayes)
+library(distributional)
+library(patchwork)
+source("_assets/plotting.R")
+```
+
+## {.dark}
+
+:::{style="font-size: 3em"}
+::::{.circle .ucl-light-purple-bg .absolute width=150 height=150 top=100 left=200 .fragment fragment-index=3}
+<i class="fa-solid fa-plane"></i>
+::::
+
+::::{.fragment .fade-out fragment-index=5}
+:::::{.circle .ucl-light-purple-bg .absolute width=150 height=150 top=100 left=-10 .fragment fragment-index=2}
+<i class="fa-solid fa-car-side"></i>
+:::::
+
+:::::{.circle .ucl-light-purple-bg .absolute width=150 height=150 top=100 left=410 .fragment fragment-index=4}
+<i class="fa-solid fa-train-subway"></i>
+:::::
+::::
+
+::::{.fragment fragment-index=6}
+:::::{.circle .ucl-light-purple-bg .absolute width=150 height=150 bottom=100 left=200 .fragment .custom .highlight fragment-index=8}
+<i class="fa-solid fa-ban"></i>
+:::::
+::::
+
+::::{.absolute .center-horizontally top=200 style="rotate: 20deg;" .fragment fragment-index=5}
+<i class="fa-solid fa-arrow-right-long"></i>
+::::
+
+::::{.absolute .center-horizontally bottom=200 style="rotate: -20deg;" .fragment fragment-index=6}
+<i class="fa-solid fa-arrow-right-long"></i>
+::::
+
+::::{.circle .ucl-light-purple-bg .absolute width=150 height=150 right=200 .center-vertically .fragment fragment-index=1}
+<i class="fa-solid fa-music"></i>
+::::
+:::
+
+:::{.much-smaller .ucl-mid-purple .center-text .absolute right=150 top=150 width=300 .fragment fragment-index=7}
+*What caused you to miss the concert?*
+:::
+
+## My focus {.dark}
+
+:::{.columns}
+::::{.column width="75%"}
+::::{.r-stack}
+:::::{.fragment}
+```{.tikz width=800}
+%%| filename: focus_1
+%%| additionalPackages: \usepackage{cmbright}
+\include{tikz_header_dark.tex}
+\begin{tikzpicture}
+    \node[minimum size=3cm, circle] (modal) [] {modal\\cognition};
+    \node[minimum size=3cm, circle, hidden] (metacognition) [right = 1.5cm of modal] {metacognition};
+    
+    \path[thick, hidden] (modal) to[out=45, in=135] node[unboxed, above]{contributes to} (metacognition);
+    \path[thick, hidden] (metacognition) to[out=225, in=315] node[unboxed, below]{about} (modal);
+\end{tikzpicture}
+```
+:::::
+
+:::::{.fragment}
+```{.tikz width=800}
+%%| filename: focus_2
+%%| additionalPackages: \usepackage{cmbright}
+\include{tikz_header_dark.tex}
+\begin{tikzpicture}
+    \node[minimum size=3cm, circle] (modal) [] {modal\\cognition};
+    \node[minimum size=3cm, circle] (metacognition) [right = 1.5cm of modal] {metacognition};
+    
+    \path[thick, hidden] (modal) to[out=45, in=135] node[unboxed, above]{contributes to} (metacognition);
+    \path[thick, hidden] (metacognition) to[out=225, in=315] node[unboxed, below]{about} (modal);
+\end{tikzpicture}
+```
+:::::
+
+:::::{.fragment}
+```{.tikz width=800}
+%%| filename: focus_3
+%%| additionalPackages: \usepackage{cmbright}
+\include{tikz_header_dark.tex}
+\begin{tikzpicture}
+    \node[minimum size=3cm, circle] (modal) [] {modal\\cognition};
+    \node[minimum size=3cm, circle] (metacognition) [right = 1.5cm of modal] {metacognition};
+    
+    \path[thick, hidden] (modal) to[out=45, in=135]  node[unboxed, above]{contributes to} (metacognition);
+    \path[thick] (metacognition) to[out=225, in=315] node[unboxed, below]{about} (modal);
+\end{tikzpicture}
+```
+:::::
+
+:::::{.fragment}
+```{.tikz width=800}
+%%| filename: focus_4
+%%| additionalPackages: \usepackage{cmbright}
+\include{tikz_header_dark.tex}
+\begin{tikzpicture}
+    \node[minimum size=3cm, circle] (modal) [] {modal\\cognition};
+    \node[minimum size=3cm, circle] (metacognition) [right = 1.5cm of modal] {metacognition};
+    
+    \path[thick] (modal) to[out=45, in=135] node[unboxed, above]{contributes to} (metacognition);
+    \path[thick] (metacognition) to[out=225, in=315] node[unboxed, below]{about} (modal);
+\end{tikzpicture}
+```
+:::::
+::::
+::::
+
+::::{.column width="25%" .much-smaller}
+:::::{.center-vertically .incremental}
+* behavior
+* computational models
+* Bayesian statistics
+:::::
+::::
+:::
+
+
+# {.dark}
+
+:::{.much-smaller}
+::::{.fragment}
+:::::{style="font-size: 3em; display: inline-block; width: 15%; text-align: right;"}
+<h1 class="ucl-light-purple">1</h1>
+:::::
+:::::{style="display: inline-block; width: 5%;"}
+:::::
+:::::{style="display: inline-block; width: 75%;"}
+<h2>Imagination<br>and causal judgment</h2>
+:::::
+::::
+
+::::{.fragment}
+:::::{style="font-size: 3em; display: inline-block; width: 15%; text-align: right;"}
+<h1 class="ucl-light-purple">2</h1>
+:::::
+:::::{style="display: inline-block; width: 5%;"}
+:::::
+:::::{style="display: inline-block; width: 75%;"}
+<h2>Metacognition<br>about modal cognition</h2>
+:::::
+::::
+
+::::{.fragment}
+:::::{style="font-size: 3em; display: inline-block; width: 15%; text-align: right;"}
+<h1 class="ucl-light-purple">3</h1>
+:::::
+:::::{style="display: inline-block; width: 5%;"}
+:::::
+:::::{style="display: inline-block; width: 75%;"}
+<h2>Modal contributions<br>to metacognition</h2>
+:::::
+::::
+:::
+
+
+
+{{< include _01_imagination.qmd >}}
+{{< include _02_metacognition_modal_cognition.qmd >}}
+{{< include _03_modal_contributions.qmd >}}
+
+# {.dark}
+
+:::{.much-smaller}
+::::{style="font-size: 3em; display: inline-block; width: 15%; text-align: right;"}
+<h1 class="ucl-light-purple">1</h1>
+::::
+::::{style="display: inline-block; width: 5%;"}
+::::
+::::{style="display: inline-block; width: 75%;"}
+<h2>Imagination<br>and causal judgment</h2>
+::::
+
+::::{style="font-size: 3em; display: inline-block; width: 15%; text-align: right;"}
+<h1 class="ucl-light-purple">2</h1>
+::::
+::::{style="display: inline-block; width: 5%;"}
+::::
+::::{style="display: inline-block; width: 75%;"}
+<h2>Metacognition<br>about modal cognition</h2>
+::::
+
+::::{style="font-size: 3em; display: inline-block; width: 15%; text-align: right;"}
+<h1 class="ucl-light-purple">3</h1>
+::::
+::::{style="display: inline-block; width: 5%;"}
+::::
+::::{style="display: inline-block; width: 75%;"}
+<h2>Modal contributions<br>to metacognition</h2>
+::::
+::::
+
+
+
+## Coming soon...
+
+
+## Teaching
+
+
+
+# Thank you {.dark}
+
+
+
+## References
+
+**NEED TO ADD**
+
+::: {#refs}
+:::
+
+
+## Back-up slides

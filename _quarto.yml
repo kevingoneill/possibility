@@ -1,0 +1,26 @@
+project:
+  type: website
+  render:
+    - _slides/index.qmd
+    - index.qmd
+website:
+  title: Possibility in confidence and cognition
+  site-path: /possibility/
+  search: false
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: _slides/index.html
+        text: Slides
+        target: _blank
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+    toc: false
+
+
+
