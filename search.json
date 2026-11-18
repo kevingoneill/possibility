@@ -11,14 +11,14 @@
     "href": "_slides/index.html#section-1",
     "title": "Possibility in confidenceand cognition",
     "section": "",
-    "text": "“if only…”\n“…might…”\n“what if…”\n“I could…”\n\n\n\n\n\nEmotion\nExplanation\nBlame\nPrediction\nIntervention"
+    "text": "“if only…”\n“what if…”\n“…might…”\n“I could…”\n\n\n\n\n\nEmotion\nExplanation\nBlame\nPrediction\nIntervention"
   },
   {
     "objectID": "_slides/index.html#my-focus",
     "href": "_slides/index.html#my-focus",
     "title": "Possibility in confidenceand cognition",
     "section": "My focus",
-    "text": "My focus\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nbehavior\n\n\ncomputational models\n\n\nBayesian statistics"
+    "text": "My focus\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nbehavioral data\n\n\ncomputational models\n\n\nBayesian statistics"
   },
   {
     "objectID": "_slides/index.html#counterfactual-thinking",
@@ -46,7 +46,7 @@
     "href": "_slides/index.html#counterfactual-simulation-model",
     "title": "Possibility in confidenceand cognition",
     "section": "Counterfactual simulation model",
-    "text": "Counterfactual simulation model\n\n\\[P(E \\;\\vert\\; do(C)) - P(E \\;\\vert\\; do(\\neg C))\\]\n\n\nadd references"
+    "text": "Counterfactual simulation model\n\n\\[\\kappa = P(E_{C=1}) - P(E_{C=0})\\]\n\n\n\n\\(\\Delta P\\) (Jenkins & Ward, 1965)\nPower PC (Cheng, 1997)\nCrediting Causality (Spellman, 1997)\nNecessity-Sufficiency (Icard et al., 2017)\nCounterfactual Effect Size (Quillien, 2020)"
   },
   {
     "objectID": "_slides/index.html#two-concepts-of-causation",
@@ -207,7 +207,7 @@
     "href": "_slides/index.html#confidence-in-causal-judgments-3",
     "title": "Possibility in confidenceand cognition",
     "section": "Confidence in causal judgments",
-    "text": "Confidence in causal judgments"
+    "text": "Confidence in causal judgments\n\n\\[E_{C=1} - E_{C=0}\\]\n\n\\[\\textrm{Var}\\left[E_{C=1} - E_{C=0}\\right]\\]"
   },
   {
     "objectID": "_slides/index.html#methods-5",
@@ -231,6 +231,13 @@
     "text": "Normality affects confidence\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nO’Neill et al. (2024)"
   },
   {
+    "objectID": "_slides/index.html#confidence-discriminates-between-models",
+    "href": "_slides/index.html#confidence-discriminates-between-models",
+    "title": "Possibility in confidenceand cognition",
+    "section": "Confidence discriminates between models",
+    "text": "Confidence discriminates between models\n\n\n\n\n\n\nO’Neill et al. (2024)"
+  },
+  {
     "objectID": "_slides/index.html#a-classic-paradigm-in-psychophysics",
     "href": "_slides/index.html#a-classic-paradigm-in-psychophysics",
     "title": "Possibility in confidenceand cognition",
@@ -242,14 +249,14 @@
     "href": "_slides/index.html#signal-discrimination",
     "title": "Possibility in confidenceand cognition",
     "section": "Signal discrimination",
-    "text": "Signal discrimination\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\[ s \\in [{\\color{s1} s_1}, {\\color{s2} s_2}] \\] \\[ x \\sim \\mathcal{N}(\\mu_s, I_2) \\] \\[ a = \\mathop{\\mathrm{argmax}}_{i \\in \\{ 1,2\\}} P(s_i \\;\\vert\\; x) \\] \\[ c = P(s_a \\;\\vert\\; x) \\]\n\n\n\\[ s \\in [{\\color{s1} s_1}, {\\color{s2} s_2}] \\] \\[ x \\sim \\mathcal{N}(\\mu_s, I_2) \\] \\[ a = \\mathop{\\mathrm{argmax}}_{i \\in \\{ 1,2\\}} P(s_i \\;\\vert\\; x) \\] \\[ c = \\textrm{logit}^{-1}\\left(\\lvert {\\color{s1} x_1} - {\\color{s2}\nx_2} \\rvert\\right) \\]\n\n\nKozyra et al. (2026)"
+    "text": "Signal discrimination\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\[ s \\in [{\\color{s1} s_1}, {\\color{s2} s_2}] \\] \\[ x \\sim \\mathcal{N}(\\mu_s, I_2) \\] \\[ a = \\mathop{\\mathrm{argmax}}_{i \\in \\{ 1,2\\}} P(s_i \\;\\vert\\; x) \\] \\[ c = P(s_a \\;\\vert\\; x) \\]\n\n\n\\[ s \\in [{\\color{s1} s_1}, {\\color{s2} s_2}] \\] \\[ x \\sim \\mathcal{N}(\\mu_s, I_2) \\] \\[ a = \\mathop{\\mathrm{argmax}}_{i \\in \\{ 1,2\\}} x_i \\] \\[ c = \\textrm{logit}^{-1}\\left(\\lvert {\\color{s1} x_1} - {\\color{s2}\nx_2} \\rvert\\right) \\]\n\n\nKozyra et al. (2026)"
   },
   {
     "objectID": "_slides/index.html#signal-detection",
     "href": "_slides/index.html#signal-detection",
     "title": "Possibility in confidenceand cognition",
     "section": "Signal detection",
-    "text": "Signal detection\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\[ p \\in [{\\color{p0} p_0}, {\\color{p1} p_1}] \\] \\[ s \\in [{\\color{p0} s_0}, {\\color{s1} s_1}, {\\color{s2} s_2}] \\] \\[ x \\sim \\mathcal{N}(\\mu_s, I_2) \\] \\[ a = \\mathop{\\mathrm{argmax}}_{i \\in \\{ 0,1\\}} P(p_i \\;\\vert\\; x) \\] \\[ c = P(p_a \\;\\vert\\; x) \\]\n\n\n\\[ p \\in [{\\color{p0} p_0}, {\\color{p1} p_1}] \\] \\[ s \\in [{\\color{p0} s_0}, {\\color{s1} s_1}, {\\color{s2} s_2}] \\] \\[ x \\sim \\mathcal{N}(\\mu_s, I_2) \\] \\[ a = \\mathop{\\mathrm{argmax}}_{i \\in \\{ 0,1\\}} P(p_i \\;\\vert\\; x) \\] \\[ c \\approx f\\left(\\textrm{max}\\left({\\color{s1} x_1}, {\\color{s2} x_2}\\right)\\right) \\]\n\n\nKozyra et al. (2026)"
+    "text": "Signal detection\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\\[ s \\in [{\\color{s1} s_1}, {\\color{s2} s_2}] \\] \\[ x \\sim \\mathcal{N}(\\mu_s, I_2) \\]\n\n\n\\[ p \\in [{\\color{p0} p_0}, {\\color{p1} p_1}] \\] \\[ s \\in [{\\color{p0} s_0}, {\\color{s1} s_1}, {\\color{s2} s_2}] \\] \\[ x \\sim \\mathcal{N}(\\mu_s, I_2) \\] \\[ a = \\mathop{\\mathrm{argmax}}_{i \\in \\{ 0,1\\}} P(p_i \\;\\vert\\; x) \\] \\[ c = P(p_a \\;\\vert\\; x) \\]\n\n\n\\[ p \\in [{\\color{p0} p_0}, {\\color{p1} p_1}] \\] \\[ s \\in [{\\color{p0} s_0}, {\\color{s1} s_1}, {\\color{s2} s_2}] \\] \\[ x \\sim \\mathcal{N}(\\mu_s, I_2) \\] \\[ a = \\mathop{\\mathrm{argmax}}_{i \\in \\{ 0,1\\}} P(p_i \\;\\vert\\; x) \\] \\[ c \\approx f\\left(\\textrm{max}\\left({\\color{s1} x_1}, {\\color{s2} x_2}\\right)\\right) \\]\n\n\nKozyra et al. (2026)"
   },
   {
     "objectID": "_slides/index.html#a-problem",
@@ -270,6 +277,13 @@
     "href": "_slides/index.html#high-dimensional-signal-detection-theory",
     "title": "Possibility in confidenceand cognition",
     "section": "High-dimensionalsignal detection theory",
+    "text": "High-dimensionalsignal detection theory\n\n\n\n\n\n\n\n\n\n\n\n\n\\[ s \\in [{\\color{s1} s_1}, {\\color{s2} s_2}] \\] \\[ x \\sim \\mathcal{N}(\\mu_s, I_2) \\] \\[ a = \\mathop{\\mathrm{argmax}}_{i \\in \\{ 1,2\\}} P(s_i \\;\\vert\\; x) \\] \\[ c = P(s_a \\;\\vert\\; x) \\]\n\n\n\n\\[ s \\in [{\\color{s1} s_1}, {\\color{s2} s_2}, \\ldots s_K] \\] \\[ x \\sim \\mathcal{N}(\\mu_s, I_K) \\] \\[ a = \\mathop{\\mathrm{argmax}}_{i \\in \\{ 1, \\ldots, N\\}} P(s_i \\;\\vert\\; x) \\] \\[ c = P(s_a \\;\\vert\\; x) \\]\n\n\n\n\\[ s \\in [{\\color{s1} s_1}, {\\color{s2} s_2}, \\ldots s_K] \\] \\[ x \\sim \\mathcal{N}(\\mu_s, I_K) \\] \\[ a = \\mathop{\\mathrm{argmax}}_{i \\in \\{ 1, \\ldots, N\\}} x_i \\] \\[ c = \\textrm{softmax}(x)_a \\]\n\n\nKozyra et al. (2026)"
+  },
+  {
+    "objectID": "_slides/index.html#high-dimensional-signal-detection-theory-1",
+    "href": "_slides/index.html#high-dimensional-signal-detection-theory-1",
+    "title": "Possibility in confidenceand cognition",
+    "section": "High-dimensionalsignal detection theory",
     "text": "High-dimensionalsignal detection theory\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKozyra et al. (2026)"
   },
   {
@@ -284,14 +298,21 @@
     "href": "_slides/index.html#metacognitive-inefficiency",
     "title": "Possibility in confidenceand cognition",
     "section": "Metacognitive inefficiency",
-    "text": "Metacognitive inefficiency\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nplanned experiment?\n\n\nKozyra et al. (2026)"
+    "text": "Metacognitive inefficiency\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nKozyra et al. (2026)"
+  },
+  {
+    "objectID": "_slides/index.html#a-possible-test-of-this-idea",
+    "href": "_slides/index.html#a-possible-test-of-this-idea",
+    "title": "Possibility in confidenceand cognition",
+    "section": "A possible test of this idea",
+    "text": "A possible test of this idea"
   },
   {
     "objectID": "_slides/index.html#developing-new-measures-of-metacognition",
     "href": "_slides/index.html#developing-new-measures-of-metacognition",
     "title": "Possibility in confidenceand cognition",
     "section": "Developing new measures of metacognition",
-    "text": "Developing new measures of metacognition\n\n\n\n\n\n\n\n\n\nO’Neill et al. (2026)"
+    "text": "Developing new measures of metacognition\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nO’Neill et al. (2026)"
   },
   {
     "objectID": "_slides/index.html#developing-new-measures-of-metacognition-1",
@@ -312,14 +333,14 @@
     "href": "_slides/index.html#hmetad-an-r-package-for-hierarchical-bayesian-modeling-of-confidence-ratings",
     "title": "Possibility in confidenceand cognition",
     "section": "hmetad: an R package for hierarchical Bayesian modeling of confidence ratings",
-    "text": "hmetad: an R package for hierarchical Bayesian modeling of confidence ratings\n\n\n\n\n\n\n\n\n\n\n## fit a multilevel meta-d' model\nm &lt;- fit_metad(\n  bf(\n    N ~ 1 + (1 | participant),\n    dprime ~ 1 + (1 | participant),\n    c ~ 1 + (1 | participant),\n    metac2zero1diff ~ 1 + (1 | participant),\n    metac2one1diff ~ 1 + (1 | participant)\n  ), data=d, ...\n)\n\n## compute meta-delta by participant\nd |&gt;\n  distinct(participant) |&gt;\n  add_metacognitive_bias_draws(m) |&gt;\n  median_qi()\n\n\n\n\nO’Neill & Fleming (2026)"
+    "text": "hmetad: an R package for hierarchical Bayesian modeling of confidence ratings\n\n\n\n\n\n https://metacoglab.github.io/hmetad\n\n\n\n\n## fit a multilevel meta-d' model\nm &lt;- fit_metad(\n  bf(\n    N ~ 1 + (1 | participant),\n    dprime ~ 1 + (1 | participant),\n    c ~ 1 + (1 | participant),\n    metac2zero1diff ~ 1 + (1 | participant),\n    metac2one1diff ~ 1 + (1 | participant)\n  ), data=d, ...\n)\n\n## compute meta-delta by participant\nd |&gt;\n  distinct(participant) |&gt;\n  add_metacognitive_bias_draws(m) |&gt;\n  median_qi()\n\n\n\n\nO’Neill & Fleming (2026)"
   },
   {
     "objectID": "_slides/index.html#looking-forward",
     "href": "_slides/index.html#looking-forward",
     "title": "Possibility in confidenceand cognition",
     "section": "Looking forward",
-    "text": "Looking forward\n\n\n\nExpanding the breadth of metacognition\n\n\nmoral reasoning\nplanning\n…\n\n\n\n\n\nMetacognitive control\n\n\ninformation-seeking\nsocial coordination\n…\n\n\n\n\n\nReal world impact\n\n\ncausal judgment “in the wild”\nclinical applications\n…"
+    "text": "Looking forward\n\n\n\nMetacognition across domains\n\n\n    counterfactual thinking\n    moral cognition\n     causal learning\n\n\n\n\n\nMetacognitive control\n\n\n\n    information-seeking\n    social coordination\n    planning\n\n\n\n\n\nReal world impact\n\n\n\n    applied causal reasoning\n    resolving disagreements\n    clinical applications"
   },
   {
     "objectID": "_slides/index.html#section-8",
@@ -333,6 +354,6 @@
     "href": "_slides/index.html#references",
     "title": "Possibility in confidenceand cognition",
     "section": "References",
-    "text": "References\n\n\nBone, M. B., St-Laurent, M., Dang, C., McQuiggan, D. A., Ryan, J. D., & Buchsbaum, B. R. (2019). Eye movement reinstatement and neural reactivation during mental imagery. Cerebral Cortex, 29(3), 1075–1089. https://doi.org/10.1093/cercor/bhy014\n\n\nGerstenberg, T., Peterson, M. F., Goodman, N. D., Lagnado, D. A., & Tenenbaum, J. B. (2017). Eye-tracking causality. Psychological Science, 28(12), 1731–1744. https://doi.org/10.1177/0956797617713053\n\n\nHenne, P., & O’Neill, K. (2022). Double prevention, causal judgments, and counterfactuals. Cognitive Science, 46(5). https://doi.org/10.1111/cogs.13127\n\n\nKozyra, W., O’Neill, K., & Fleming, S. M. (2026). Confidence is detection-like in high-dimensional spaces. Open Mind, 10, 1279–1309. https://doi.org/10.1162/opmi.a.359\n\n\nKrasich, K., O’Neill, K., & De Brigard, F. (2024). Looking at mental images: Eye‐tracking mental simulation during retrospective causal judgment. Cognitive Science, 48(3). https://doi.org/10.1111/cogs.13426\n\n\nO’Neill, K., Henne, P., Bello, P., Pearson, J., & De Brigard, F. (2022). Confidence and gradation in causal judgment. Cognition, 223, 105036. https://doi.org/10.1016/j.cognition.2022.105036\n\n\nO’Neill, K., Henne, P., Pearson, J., & De Brigard, F. (2024). Modeling confidence in causal judgments. Journal of Experimental Psychology: General, 153(8), 2142–2159. https://doi.org/10.1037/xge0001615\n\n\nO’Neill, K., & Fleming, S. M. (2026). Quantifying metacognitive sensitivity with the hmetad package in r. PsyArXiv.\n\n\nO’Neill, K., Henne, P., Quillien, T., Icard, T., & De Brigard, F. (2025). Norms moderate causal judgments in cases of double prevention. Proceedings of the Annual Meeting of the Cognitive Science Society, 47.\n\n\nO’Neill, K., Quillien, T., & Henne, P. (2022). A counterfactual model of causal judgments in double prevention. Conference on Cognitive Computational Neuroscience.\n\n\nO’Neill, K., Zhan, T., & Fleming, S. M. (2026). A measure of metacognitive bias you can be confident in. Proceedings of the Annual Meeting of the Cognitive Science Society, 48.\n\n\nPeters, M. A. K., Thesen, T., Ko, Y. D., Maniscalco, B., Carlson, C., Davidson, M., Doyle, W., Kuzniecky, R., Devinsky, O., Halgren, E., & Lau, H. (2017). Perceptual confidence neglects decision-incongruent evidence in the brain. Nature Human Behaviour, 1(7). https://doi.org/10.1038/s41562-017-0139\n\n\nQuillien, T., O’Neill, K., & Henne, P. (2025). A counterfactual explanation for recency effects in double prevention scenarios: Commentary on thanawala and erb (2024). Cognition, 264, 106106. https://doi.org/10.1016/j.cognition.2025.106106"
+    "text": "References\n\n\nBone, M. B., St-Laurent, M., Dang, C., McQuiggan, D. A., Ryan, J. D., & Buchsbaum, B. R. (2019). Eye movement reinstatement and neural reactivation during mental imagery. Cerebral Cortex, 29(3), 1075–1089. https://doi.org/10.1093/cercor/bhy014\n\n\nCheng, P. W. (1997). From covariation to causation: A causal power theory. Psychological Review, 104(2), 367–405. https://doi.org/10.1037/0033-295x.104.2.367\n\n\nGerstenberg, T., Peterson, M. F., Goodman, N. D., Lagnado, D. A., & Tenenbaum, J. B. (2017). Eye-tracking causality. Psychological Science, 28(12), 1731–1744. https://doi.org/10.1177/0956797617713053\n\n\nHenne, P., & O’Neill, K. (2022). Double prevention, causal judgments, and counterfactuals. Cognitive Science, 46(5). https://doi.org/10.1111/cogs.13127\n\n\nIcard, T. F., Kominsky, J. F., & Knobe, J. (2017). Normality and actual causal strength. Cognition, 161, 80–93. https://doi.org/10.1016/j.cognition.2017.01.010\n\n\nJenkins, H. M., & Ward, W. C. (1965). Judgment of contingency between responses and outcomes. Psychological Monographs: General and Applied, 79(1), 1–17. https://doi.org/10.1037/h0093874\n\n\nKozyra, W., O’Neill, K., & Fleming, S. M. (2026). Confidence is detection-like in high-dimensional spaces. Open Mind, 10, 1279–1309. https://doi.org/10.1162/opmi.a.359\n\n\nKrasich, K., O’Neill, K., & De Brigard, F. (2024). Looking at mental images: Eye‐tracking mental simulation during retrospective causal judgment. Cognitive Science, 48(3). https://doi.org/10.1111/cogs.13426\n\n\nO’Neill, K., Henne, P., Bello, P., Pearson, J., & De Brigard, F. (2022). Confidence and gradation in causal judgment. Cognition, 223, 105036. https://doi.org/10.1016/j.cognition.2022.105036\n\n\nO’Neill, K., Henne, P., Pearson, J., & De Brigard, F. (2024). Modeling confidence in causal judgments. Journal of Experimental Psychology: General, 153(8), 2142–2159. https://doi.org/10.1037/xge0001615\n\n\nO’Neill, K., & Fleming, S. M. (2026). Quantifying metacognitive sensitivity with the hmetad package in r. PsyArXiv.\n\n\nO’Neill, K., Henne, P., Quillien, T., Icard, T., & De Brigard, F. (2025). Norms moderate causal judgments in cases of double prevention. Proceedings of the Annual Meeting of the Cognitive Science Society, 47.\n\n\nO’Neill, K., Quillien, T., & Henne, P. (2022). A counterfactual model of causal judgments in double prevention. Conference on Cognitive Computational Neuroscience.\n\n\nO’Neill, K., Zhan, T., & Fleming, S. M. (2026). A measure of metacognitive bias you can be confident in. Proceedings of the Annual Meeting of the Cognitive Science Society, 48.\n\n\nPeters, M. A. K., Thesen, T., Ko, Y. D., Maniscalco, B., Carlson, C., Davidson, M., Doyle, W., Kuzniecky, R., Devinsky, O., Halgren, E., & Lau, H. (2017). Perceptual confidence neglects decision-incongruent evidence in the brain. Nature Human Behaviour, 1(7). https://doi.org/10.1038/s41562-017-0139\n\n\nQuillien, T. (2020). When do we think that x caused y? Cognition, 205, 104410. https://doi.org/10.1016/j.cognition.2020.104410\n\n\nQuillien, T., O’Neill, K., & Henne, P. (2025). A counterfactual explanation for recency effects in double prevention scenarios: Commentary on thanawala and erb (2024). Cognition, 264, 106106. https://doi.org/10.1016/j.cognition.2025.106106\n\n\nSpellman, B. A. (1997). Crediting causality. Journal of Experimental Psychology: General, 126(4), 323–348. https://doi.org/10.1037/0096-3445.126.4.323"
   }
 ]
