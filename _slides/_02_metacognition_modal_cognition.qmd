@@ -601,39 +601,39 @@ theme_cft <- function(var='Causal Judgment', base_size=18, ...) {
 ::::{.column width="20%"}
 ::::{.center-vertically .center-text}
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
-[<i class="fa-solid fa-ban"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-ban"></i>]{}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-orange}
+[<i class="fa-solid fa-music"></i>]{style="opacity: 40%;"}
 :::
 
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
-[<i class="fa-solid fa-ban"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-ban"></i>]{}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-music"></i>]{}
 :::
 
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
-[<i class="fa-solid fa-ban"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-ban"></i>]{}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-orange}
+[<i class="fa-solid fa-music"></i>]{style="opacity: 40%;"}
 :::
 
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
-[<i class="fa-solid fa-ban"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-ban"></i>]{}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-music"></i>]{}
 :::
 
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
-[<i class="fa-solid fa-ban"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-ban"></i>]{}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-orange}
+[<i class="fa-solid fa-music"></i>]{style="opacity: 40%;"}
 :::
 
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
-[<i class="fa-solid fa-ban"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-ban"></i>]{}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-orange}
+[<i class="fa-solid fa-music"></i>]{style="opacity: 40%;"}
 :::
 ::::
 ::::
@@ -687,39 +687,39 @@ theme_cft <- function(var='Causal Judgment', base_size=18, ...) {
 ::::{.column width="20%"}
 ::::{.center-vertically .center-text}
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
-[<i class="fa-solid fa-ban"></i>]{.ucl-light-orange}
+[<i class="fa-solid fa-ban"></i>]{style="opacity: 40%;"}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-music"></i>]{}
 :::
 
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
-[<i class="fa-solid fa-ban"></i>]{.ucl-light-orange}
+[<i class="fa-solid fa-ban"></i>]{style="opacity: 40%;"}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-orange}
+[<i class="fa-solid fa-music"></i>]{style="opacity: 40%;"}
 :::
 
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
-[<i class="fa-solid fa-ban"></i>]{.ucl-light-orange}
+[<i class="fa-solid fa-ban"></i>]{style="opacity: 40%;"}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-music"></i>]{}
 :::
 
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
-[<i class="fa-solid fa-ban"></i>]{.ucl-light-orange}
+[<i class="fa-solid fa-ban"></i>]{style="opacity: 40%;"}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-music"></i>]{}
 :::
 
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
-[<i class="fa-solid fa-ban"></i>]{.ucl-light-orange}
+[<i class="fa-solid fa-ban"></i>]{style="opacity: 40%;"}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-music"></i>]{}
 :::
 
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
-[<i class="fa-solid fa-ban"></i>]{.ucl-light-orange}
+[<i class="fa-solid fa-ban"></i>]{style="opacity: 40%;"}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-music"></i>]{}
 :::
 ::::
 ::::
@@ -748,39 +748,39 @@ theme_cft <- function(var='Causal Judgment', base_size=18, ...) {
 ::::{.column width="20%"}
 ::::{.center-vertically .center-text}
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
-[<i class="fa-solid fa-plane"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-plane"></i>]{}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-music"></i>]{}
 :::
 
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
-[<i class="fa-solid fa-plane"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-plane"></i>]{}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-music"></i>]{}
 :::
 
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
-[<i class="fa-solid fa-plane"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-plane"></i>]{}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-orange}
+[<i class="fa-solid fa-music"></i>]{style="opacity: 40%;"}
 :::
 
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
-[<i class="fa-solid fa-plane"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-plane"></i>]{}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-music"></i>]{}
 :::
 
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
-[<i class="fa-solid fa-plane"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-plane"></i>]{}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-music"></i>]{}
 :::
 
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
-[<i class="fa-solid fa-plane"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-plane"></i>]{}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-music"></i>]{}
 :::
 ::::
 ::::
@@ -834,39 +834,39 @@ theme_cft <- function(var='Causal Judgment', base_size=18, ...) {
 ::::{.column width="20%"}
 ::::{.center-vertically .center-text}
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
-[<i class="fa-solid fa-plane"></i>]{.ucl-light-orange}
+[<i class="fa-solid fa-plane"></i>]{style="opacity: 40%;"}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-music"></i>]{}
 :::
 
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
-[<i class="fa-solid fa-plane"></i>]{.ucl-light-orange}
+[<i class="fa-solid fa-plane"></i>]{style="opacity: 40%;"}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-music"></i>]{}
 :::
 
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
-[<i class="fa-solid fa-plane"></i>]{.ucl-light-orange}
+[<i class="fa-solid fa-plane"></i>]{style="opacity: 40%;"}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-music"></i>]{}
 :::
 
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
-[<i class="fa-solid fa-plane"></i>]{.ucl-light-orange}
+[<i class="fa-solid fa-plane"></i>]{style="opacity: 40%;"}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-music"></i>]{}
 :::
 
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
-[<i class="fa-solid fa-plane"></i>]{.ucl-light-orange}
+[<i class="fa-solid fa-plane"></i>]{style="opacity: 40%;"}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-orange}
+[<i class="fa-solid fa-music"></i>]{style="opacity: 40%;"}
 :::
 
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
-[<i class="fa-solid fa-plane"></i>]{.ucl-light-orange}
+[<i class="fa-solid fa-plane"></i>]{style="opacity: 40%;"}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-music"></i>]{}
 :::
 ::::
 ::::
@@ -891,7 +891,15 @@ theme_cft <- function(var='Causal Judgment', base_size=18, ...) {
 
 ## Confidence in causal judgments
 
-:::{.center-xy}
+:::{.larger .r-stack}
+[$$E_{C=1} - E_{C=0}$$]{.absolute top=85 left=389 .fragment}
+
+:::{.fragment .ucl-white-bg}
+$$\textrm{Var}\left[E_{C=1} - E_{C=0}\right]$$
+:::
+:::
+
+:::{.center-horizontally .fragment}
 ```{r}
 #| label: conf_cause_1
 #| fig-width: 5
@@ -912,7 +920,7 @@ p_conf_cause
 ```
 :::
 
-:::{.center-xy .fragment}
+:::{.center-horizontally .fragment}
 ```{r}
 #| label: conf_cause_2
 #| fig-width: 5
@@ -1191,6 +1199,20 @@ p_ns_conf <- d_ns |>
 
 
 
+## Confidence discriminates between models
+
+
+:::{.r-stack}
+![](_images/_gradation/loo_1.svg){.fragment width="100%"}
+
+![](_images/_gradation/loo_2.svg){.fragment width="100%"}
+
+![](_images/_gradation/loo_3.svg){.fragment width="100%"}
+:::
+
+:::{.bottom-left .tiny}
+@ONeill2024
+:::
 
 
 

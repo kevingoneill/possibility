@@ -3,6 +3,7 @@ index.html
 **/index_cache/
 *.aux
 _slides/_models/*.rds
+_slides/possibility_in_confidence_and_cognition.pdf
 _site
 
 # temporary files

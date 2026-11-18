@@ -52,39 +52,39 @@ Quillien, T., O’Neill, K., & Henne, P. (2025).<br>&emsp;&emsp;A counterfactual
 ::::{.column width="20%"}
 ::::{.center-vertically .center-text}
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;" .fragment fragment-index=1}
-[<i class="fa-solid fa-ban"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-ban"></i>]{}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-orange}
+[<i class="fa-solid fa-music"></i>]{style="opacity: 40%;"}
 :::
 
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;" .fragment fragment-index=2}
-[<i class="fa-solid fa-ban"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-ban"></i>]{}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-music"></i>]{}
 :::
 
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;" .fragment fragment-index=3}
-[<i class="fa-solid fa-ban"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-ban"></i>]{}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-orange}
+[<i class="fa-solid fa-music"></i>]{style="opacity: 40%;"}
 :::
 
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;" .fragment fragment-index=4}
-[<i class="fa-solid fa-ban"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-ban"></i>]{}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-music"></i>]{}
 :::
 
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;" .fragment fragment-index=4}
-[<i class="fa-solid fa-ban"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-ban"></i>]{}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-orange}
+[<i class="fa-solid fa-music"></i>]{style="opacity: 40%;"}
 :::
 
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;" .fragment fragment-index=4}
-[<i class="fa-solid fa-ban"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-ban"></i>]{}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-orange}
+[<i class="fa-solid fa-music"></i>]{style="opacity: 40%;"}
 :::
 ::::
 ::::
@@ -98,39 +98,39 @@ Quillien, T., O’Neill, K., & Henne, P. (2025).<br>&emsp;&emsp;A counterfactual
 ::::{.column width="20%"}
 ::::{.center-vertically .center-text .fragment fragment-index=5}
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
-[<i class="fa-solid fa-ban"></i>]{.ucl-light-orange}
+[<i class="fa-solid fa-ban"></i>]{style="opacity: 40%;"}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-music"></i>]{}
 :::
 
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
-[<i class="fa-solid fa-ban"></i>]{.ucl-light-orange}
+[<i class="fa-solid fa-ban"></i>]{style="opacity: 40%;"}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-orange}
+[<i class="fa-solid fa-music"></i>]{style="opacity: 40%;"}
 :::
 
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
-[<i class="fa-solid fa-ban"></i>]{.ucl-light-orange}
+[<i class="fa-solid fa-ban"></i>]{style="opacity: 40%;"}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-music"></i>]{}
 :::
 
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
-[<i class="fa-solid fa-ban"></i>]{.ucl-light-orange}
+[<i class="fa-solid fa-ban"></i>]{style="opacity: 40%;"}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-music"></i>]{}
 :::
 
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
-[<i class="fa-solid fa-ban"></i>]{.ucl-light-orange}
+[<i class="fa-solid fa-ban"></i>]{style="opacity: 40%;"}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-music"></i>]{}
 :::
 
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
-[<i class="fa-solid fa-ban"></i>]{.ucl-light-orange}
+[<i class="fa-solid fa-ban"></i>]{style="opacity: 40%;"}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-music"></i>]{}
 :::
 ::::
 ::::
@@ -154,39 +154,39 @@ Quillien, T., O’Neill, K., & Henne, P. (2025).<br>&emsp;&emsp;A counterfactual
 ::::{.column width="20%"}
 ::::{.center-vertically .center-text}
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
-[<i class="fa-solid fa-plane"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-plane"></i>]{}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-music"></i>]{}
 :::
 
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
-[<i class="fa-solid fa-plane"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-plane"></i>]{}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-music"></i>]{}
 :::
 
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
-[<i class="fa-solid fa-plane"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-plane"></i>]{}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-orange}
+[<i class="fa-solid fa-music"></i>]{style="opacity: 40%;"}
 :::
 
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
-[<i class="fa-solid fa-plane"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-plane"></i>]{}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-music"></i>]{}
 :::
 
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
-[<i class="fa-solid fa-plane"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-plane"></i>]{}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-music"></i>]{}
 :::
 
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
-[<i class="fa-solid fa-plane"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-plane"></i>]{}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-music"></i>]{}
 :::
 ::::
 ::::
@@ -200,39 +200,39 @@ Quillien, T., O’Neill, K., & Henne, P. (2025).<br>&emsp;&emsp;A counterfactual
 ::::{.column width="20%"}
 ::::{.center-vertically .center-text .fragment fragment-index=1}
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
-[<i class="fa-solid fa-plane"></i>]{.ucl-light-orange}
+[<i class="fa-solid fa-plane"></i>]{style="opacity: 40%;"}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-music"></i>]{}
 :::
 
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
-[<i class="fa-solid fa-plane"></i>]{.ucl-light-orange}
+[<i class="fa-solid fa-plane"></i>]{style="opacity: 40%;"}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-music"></i>]{}
 :::
 
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
-[<i class="fa-solid fa-plane"></i>]{.ucl-light-orange}
+[<i class="fa-solid fa-plane"></i>]{style="opacity: 40%;"}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-music"></i>]{}
 :::
 
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
-[<i class="fa-solid fa-plane"></i>]{.ucl-light-orange}
+[<i class="fa-solid fa-plane"></i>]{style="opacity: 40%;"}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-music"></i>]{}
 :::
 
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
-[<i class="fa-solid fa-plane"></i>]{.ucl-light-orange}
+[<i class="fa-solid fa-plane"></i>]{style="opacity: 40%;"}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-orange}
+[<i class="fa-solid fa-music"></i>]{style="opacity: 40%;"}
 :::
 
 :::{.box .ucl-dark-purple-outline .ucl-dark-purple .ucl-white-bg style="width: 175px; margin: 10px; padding: 5px; padding-top: 1px; padding-bottom: 1px; outline: dashed !important;"}
-[<i class="fa-solid fa-plane"></i>]{.ucl-light-orange}
+[<i class="fa-solid fa-plane"></i>]{style="opacity: 40%;"}
 <i class="fa-solid fa-arrow-right-long"></i>
-[<i class="fa-solid fa-music"></i>]{.ucl-light-blue}
+[<i class="fa-solid fa-music"></i>]{}
 :::
 ::::
 ::::
@@ -253,13 +253,20 @@ Quillien, T., O’Neill, K., & Henne, P. (2025).<br>&emsp;&emsp;A counterfactual
 
 ## Counterfactual simulation model
 
-:::{.much-larger}
-$$P(E \;\vert\; do(C)) - P(E \;\vert\; do(\neg C))$$
+:::{.larger .fragment}
+$$\kappa = P(E_{C=1}) - P(E_{C=0})$$
 :::
 
-:::{.notes}
-add references
+
+:::{.fragment}
+- $\Delta P$ [@Jenkins1965]
+- Power PC [@Cheng1997]
+- Crediting Causality [@Spellman1997]
+- Necessity-Sufficiency [@Icard2017]
+- Counterfactual Effect Size [@Quillien2020]
 :::
+
+
 
 ## Two concepts of causation
 

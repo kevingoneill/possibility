@@ -205,7 +205,7 @@ absent <- '#b3b3b3'
 
 ## Signal discrimination
 
-:::{.fragment .absolute top=75 left=50 fragment-index=1}
+:::{.fragment .absolute top=75 left=50 fragment-index=2}
 ```{r}
 #| label: discrimination_1
 #| fig-width: 6
@@ -239,7 +239,7 @@ p.discrimination <- ggplot(c_detection, aes(x=x1, y=x2)) +
 ```
 :::
 
-:::{.fragment .absolute top=75 left=50 fragment-index=2}
+:::{.fragment .absolute top=75 left=50 fragment-index=3}
 ```{r}
 #| label: discrimination_2
 #| fig-width: 6
@@ -253,7 +253,7 @@ p.discrimination <- p.discrimination +
 ```
 :::
 
-:::{.fragment .absolute top=75 left=50 fragment-index=3}
+:::{.fragment .absolute top=75 left=50 fragment-index=4}
 ```{r}
 #| label: discrimination_3
 #| fig-width: 6
@@ -294,8 +294,8 @@ p.discrimination <- ggplot(c_detection, aes(x=x1, y=x2)) +
 :::
 
 :::{.absolute right=0 top=150 .fragment .fade-out fragment-index=6}
-[$$ s \in [{\color{s1} s_1}, {\color{s2} s_2}] $$]{.fragment fragment-index=4}
-[$$ x \sim \mathcal{N}(\mu_s, I_2) $$]{.fragment fragment-index=4}
+[$$ s \in [{\color{s1} s_1}, {\color{s2} s_2}] $$]{.fragment fragment-index=1}
+[$$ x \sim \mathcal{N}(\mu_s, I_2) $$]{.fragment fragment-index=1}
 [$$ a = \argmax_{i \in \{ 1,2\}} P(s_i \;\vert\; x) $$]{.fragment fragment-index=5}
 [$$ c = P(s_a \;\vert\; x) $$]{.fragment fragment-index=5}
 :::
@@ -303,7 +303,7 @@ p.discrimination <- ggplot(c_detection, aes(x=x1, y=x2)) +
 :::{.absolute right=0 top=150 .fragment fragment-index=6}
 $$ s \in [{\color{s1} s_1}, {\color{s2} s_2}] $$
 $$ x \sim \mathcal{N}(\mu_s, I_2) $$
-$$ a = \argmax_{i \in \{ 1,2\}} P(s_i \;\vert\; x) $$
+$$ a = \argmax_{i \in \{ 1,2\}} x_i $$
 $$ c = \invlogit{\lvert {\color{s1} x_1} - {\color{s2}
 x_2} \rvert} $$
 :::
@@ -353,7 +353,7 @@ p.detection <- p.detection +
 ```
 :::
 
-:::{.fragment .absolute top=75 left=50 fragment-index=4}
+:::{.fragment .absolute top=75 left=50 fragment-index=3}
 ```{r}
 #| label: detection_3
 #| fig-width: 6
@@ -380,15 +380,20 @@ p.detection <- ggplot(c_detection, aes(x=x1, y=x2)) +
 ```
 :::
 
-:::{.absolute right=0 top=100 .fragment .fade-out fragment-index=4}
-[$$ p \in [{\color{p0} p_0}, {\color{p1} p_1}] $$]{.fragment fragment-index=2}
-[$$ s \in [{\color{p0} s_0}, {\color{s1} s_1}, {\color{s2} s_2}] $$]{.fragment fragment-index=2}
-[$$ x \sim \mathcal{N}(\mu_s, I_2) $$]{.fragment fragment-index=2}
-[$$ a = \argmax_{i \in \{ 0,1\}} P(p_i \;\vert\; x) $$]{.fragment fragment-index=3}
-[$$ c = P(p_a \;\vert\; x) $$]{.fragment fragment-index=3}
+:::{.absolute right=75 top=150 .fragment .fade-out fragment-index=1}
+$$ s \in [{\color{s1} s_1}, {\color{s2} s_2}] $$
+$$ x \sim \mathcal{N}(\mu_s, I_2) $$
 :::
 
-:::{.absolute right=0 top=100 .fragment  fragment-index=4}
+:::{.absolute right=0 top=100 .fragment .fade-out fragment-index=3}
+[$$ p \in [{\color{p0} p_0}, {\color{p1} p_1}] $$]{.fragment fragment-index=1}
+[$$ s \in [{\color{p0} s_0}, {\color{s1} s_1}, {\color{s2} s_2}] $$]{.fragment fragment-index=1}
+[$$ x \sim \mathcal{N}(\mu_s, I_2) $$]{.fragment fragment-index=1}
+[$$ a = \argmax_{i \in \{ 0,1\}} P(p_i \;\vert\; x) $$]{.fragment fragment-index=2}
+[$$ c = P(p_a \;\vert\; x) $$]{.fragment fragment-index=2}
+:::
+
+:::{.absolute right=0 top=100 .fragment  fragment-index=3}
 [$$ p \in [{\color{p0} p_0}, {\color{p1} p_1}] $$]{}
 [$$ s \in [{\color{p0} s_0}, {\color{s1} s_1}, {\color{s2} s_2}] $$]{}
 [$$ x \sim \mathcal{N}(\mu_s, I_2) $$]{}
@@ -467,6 +472,52 @@ p.detection <- ggplot(c_detection, aes(x=x1, y=x2)) +
 :::{.bottom-left .tiny}
 @Kozyra2026
 :::
+
+
+
+
+## High-dimensional<br>signal detection theory
+
+:::{.absolute top=150 left=50 style="width: 500px;"}
+```{r}
+#| label: discrimination_high_dim
+#| fig-width: 6
+#| fig-height: 7
+(p.discrimination / guide_area()) +
+  plot_layout(guides='collect', heights=c(1, .25))
+```
+:::
+
+:::{.absolute right=0 top=150 .fragment .fade-out fragment-index=1}
+$$ s \in [{\color{s1} s_1}, {\color{s2} s_2}] $$
+$$ x \sim \mathcal{N}(\mu_s, I_2) $$
+$$ a = \argmax_{i \in \{ 1,2\}} P(s_i \;\vert\; x) $$
+$$ c = P(s_a \;\vert\; x) $$
+:::
+
+:::{.fragment .fade-out fragment-index=2}
+::::{.absolute right=0 top=150 .fragment fragment-index=1}
+$$ s \in [{\color{s1} s_1}, {\color{s2} s_2}, \ldots s_K] $$
+$$ x \sim \mathcal{N}(\mu_s, I_K) $$
+$$ a = \argmax_{i \in \{ 1, \ldots, N\}} P(s_i \;\vert\; x) $$
+$$ c = P(s_a \;\vert\; x) $$
+::::
+:::
+
+:::{.absolute right=38 top=150 .fragment fragment-index=2}
+$$ s \in [{\color{s1} s_1}, {\color{s2} s_2}, \ldots s_K] $$
+$$ x \sim \mathcal{N}(\mu_s, I_K) $$
+$$ a = \argmax_{i \in \{ 1, \ldots, N\}} x_i $$
+$$ c = \textrm{softmax}(x)_a $$
+:::
+
+
+:::{.bottom-left style="font-size: .33em;"}
+@Kozyra2026
+:::
+
+
+
 
 
 
@@ -715,19 +766,41 @@ p.metad.20 <- k_metad_plot(K=20)
 ::::
 :::
 
-:::{.notes}
-planned experiment?
-:::
-
 :::{.bottom-left .tiny}
 @Kozyra2026
 :::
+
+
+## A possible test of this idea
+
+:::{.r-stack}
+::::{.ucl-white-bg}
+![](_images/_confidence/task1.svg){width="100%" .fragment}
+::::
+
+::::{.ucl-white-bg}
+![](_images/_confidence/task2.svg){width="100%" .fragment}
+::::
+
+::::{.ucl-white-bg}
+![](_images/_confidence/task3.svg){width="100%" .fragment}
+::::
+:::
+
 
 
 
 ## Developing new measures of metacognition
 
 :::{.r-stack}
+::::{.ucl-white-bg}
+![](_images/_confidence/fig_specificity_1-1.svg){width="100%" .fragment}
+::::
+
+::::{.ucl-white-bg}
+![](_images/_confidence/fig_specificity_2-1.svg){width="100%" .fragment}
+::::
+
 ::::{.ucl-white-bg}
 ![](_images/_confidence/fig_specificity_3-1.svg){width="100%" .fragment}
 ::::
@@ -763,13 +836,14 @@ planned experiment?
 ## `hmetad`: an `R` package for hierarchical Bayesian modeling of confidence ratings {.dark}
 
 :::{.columns}
-::::{.column .center-text }
+::::{.column .center-text .tiny}
 
-:::::{.tiny}
+:::::{}
 <br>
 :::::
 
 ![](_images/_confidence/hmetad_qr.svg){width="50%"}
+<https://metacoglab.github.io/hmetad>
 ::::
 
 
@@ -821,7 +895,7 @@ d |>
 :::{.much-smaller}
 <ul>
     <li class="fragment" data-fragment-index=1>explains how confidence is affected by evidence</li>
-    <li class="fragment" data-fragment-index=2>motivates the development of new statistical tools</li>
+    <li class="fragment" data-fragment-index=2>motivates the development of new statistical methods</li>
     <li class="fragment" data-fragment-index=3>creates opportunities for studying other kinds of metacognition</li>
 </ul>
 :::

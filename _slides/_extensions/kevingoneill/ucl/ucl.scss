@@ -332,6 +332,10 @@ $mermaid-node-fg-color: $ucl-dark-purple;
     outline: 5px $ucl-light-green solid !important;
 }
 
+.reveal .slide-number {
+    font-family: $font-family-sans-serif !important;
+}
+
 .slide-logo {
     content: url('https://cdn.ucl.ac.uk/logos/ucl/ucl-logo--primary.svg');
     position: absolute;

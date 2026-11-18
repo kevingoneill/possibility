@@ -4,6 +4,7 @@ format:
   ucl-revealjs:
     code-line-numbers: false
     pdf-separate-fragments: true
+    slide-number: true
     include-in-header:
       - file: mathjax-color.html
 author: 
@@ -101,13 +102,13 @@ source("_assets/plotting.R")
 :::{.columns .larger}
 ::::{.column width="50%"}
 :::::{.center-vertically .center-text style="width: 40%;"}
-*"if only..."*
+[*"if only..."*]{style="padding: 10px;" .fragment fragment-index=1}
 
-*"...might..."*
+[*"what if..."*]{style="padding: 10px;" .fragment fragment-index=2}
 
-*"what if..."*
+[*"...might..."*]{style="padding: 10px;" .fragment fragment-index=3}
 
-*"I could..."*
+[*"I could..."*]{style="padding: 10px;" .fragment fragment-index=4}
 :::::
 ::::
 
@@ -116,20 +117,20 @@ source("_assets/plotting.R")
 
 ::::{.column width="30%"}
 :::::{.center-vertically}
-[Emotion]{.fragment fragment-index=1}
+[Emotion]{.fragment fragment-index=5}
 
-[Explanation]{.fragment fragment-index=2}
+[Explanation]{.fragment fragment-index=6}
 
-[Blame]{.fragment fragment-index=3}
+[Blame]{.fragment fragment-index=7}
 
-[Prediction]{.fragment fragment-index=4}
+[Prediction]{.fragment fragment-index=8}
 
-[Intervention]{.fragment fragment-index=5}
+[Intervention]{.fragment fragment-index=9}
 :::::
 ::::
 :::
 
-[<i class="fa-solid fa-angles-right"></i>]{.center-xy .ucl-light-purple style="font-size: 8em;" .fragment fragment-index=1}
+[<i class="fa-solid fa-angles-right"></i>]{.center-xy .ucl-light-purple style="font-size: 8em;" .fragment fragment-index=5}
 
 
 
@@ -155,21 +156,6 @@ source("_assets/plotting.R")
 
 :::::{.ucl-dark-purple-bg .center-vertically style="width: 60%;" .fragment fragment-index=2}
 ```{.tikz width=800}
-%%| filename: focus_2
-%%| additionalPackages: \usepackage{cmbright}
-\include{tikz_header_dark.tex}
-\begin{tikzpicture}
-    \node[minimum size=3cm, circle] (modal) [] {modal\\cognition};
-    \node[minimum size=3cm, circle] (metacognition) [right = 1.5cm of modal] {metacognition};
-    
-    \path[thick, hidden] (modal) to[out=45, in=135] node[unboxed, above]{contributes to} (metacognition);
-    \path[thick, hidden] (metacognition) to[out=225, in=315] node[unboxed, below]{about} (modal);
-\end{tikzpicture}
-```
-:::::
-
-:::::{.ucl-dark-purple-bg .center-vertically style="width: 60%;" .fragment fragment-index=3}
-```{.tikz width=800}
 %%| filename: focus_3
 %%| additionalPackages: \usepackage{cmbright}
 \include{tikz_header_dark.tex}
@@ -183,7 +169,7 @@ source("_assets/plotting.R")
 ```
 :::::
 
-:::::{.ucl-dark-purple-bg .center-vertically style="width: 60%;" .fragment fragment-index=4}
+:::::{.ucl-dark-purple-bg .center-vertically style="width: 60%;" .fragment fragment-index=3}
 ```{.tikz width=800}
 %%| filename: focus_4
 %%| additionalPackages: \usepackage{cmbright}
@@ -201,11 +187,11 @@ source("_assets/plotting.R")
 ::::
 
 ::::{.column width="40%" .much-smaller}
-:::::{.box .center-vertically .fragment fragment-index=5}
+:::::{.box .center-vertically .fragment fragment-index=4}
 <ul>
-    <li class="fragment" data-fragment-index=5>behavior</li>
-    <li class="fragment" data-fragment-index=6>computational models</li>
-    <li class="fragment" data-fragment-index=7>Bayesian statistics</li>
+    <li class="fragment" data-fragment-index=4>behavioral data</li>
+    <li class="fragment" data-fragment-index=5>computational models</li>
+    <li class="fragment" data-fragment-index=6>Bayesian statistics</li>
 </ul>
 :::::
 ::::
@@ -295,26 +281,35 @@ source("_assets/plotting.R")
 ```
 
 :::{.columns}
-::::{.column style="width: 27%; height: 450px;" .box}
-Expanding the breadth of metacognition
+::::{.column style="width: 27%; height: 450px;" .box .fragment fragment-index=1}
+**Metacognition across domains**
 
 :::::{.much-smaller}
-- moral reasoning
-- planning
-- ...
+```{=html}
+<ul>
+    <li class="fragment" data-fragment-index=1>counterfactual thinking</li>
+    <li class="fragment" data-fragment-index=2>moral cognition</li>
+    <li class="fragment" data-fragment-index=3> causal learning</li>
+</ul>
+```
 :::::
 ::::
 
 ::::{.column width="2%"}
 ::::
 
-::::{.column style="width: 27%; height: 450px;" .box}
-Metacognitive control
+::::{.column style="width: 27%; height: 450px;" .box .fragment fragment-index=4}
+**Metacognitive control**
 
 :::::{.much-smaller}
-- information-seeking
-- social coordination
-- ...
+```{=html}
+<br>
+<ul>
+    <li class="fragment" data-fragment-index=4>information-seeking</li>
+    <li class="fragment" data-fragment-index=5>social coordination</li>
+    <li class="fragment" data-fragment-index=6>planning</li>
+</ul>
+```
 :::::
 ::::
 
@@ -322,13 +317,18 @@ Metacognitive control
 ::::
 
 
-::::{.column style="width: 27%; height: 450px;" .box}
-Real world impact
+::::{.column style="width: 27%; height: 450px;" .box .fragment fragment-index=7}
+**Real world impact**
 
 :::::{.much-smaller}
-- causal judgment "in the wild"
-- clinical applications
-- ...
+```{=html}
+<br>
+<ul>
+    <li class="fragment" data-fragment-index=7>applied causal reasoning</li>
+    <li class="fragment" data-fragment-index=8>resolving disagreements</li>
+    <li class="fragment" data-fragment-index=9>clinical applications</li>
+</ul>
+```
 :::::
 ::::
 :::
